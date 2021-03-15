@@ -385,6 +385,7 @@
                     
                                             <thead>
                                                 <tr>
+                                                    <th scope="col">Operators ID NO:</th>
                                                     <th scope="col">Name</th>
                                                     <th scope="col">Phone Number</th>
                                                     <th scope="col">Adress</th>
@@ -393,6 +394,7 @@
                                             </thead>
                                             <tfoot>
                                                 <tr>
+                                                     <th scope="col">Operators ID NO:</th>
                                                     <th scope="col">Name</th>
                                                     <th scope="col">Phone Number</th>
                                                     <th scope="col">Adress</th>
@@ -401,6 +403,7 @@
                                             </tfoot>
                                                 @foreach ($operators as $operatordata)
                                                     <tr>
+                                                        <td>{{ $operatordata->id}}</td>
                                                         <td>{{ $operatordata->name}}</td>
                                                         <td>{{ $operatordata->phone_number }}</td>
                                                         <td>{{ $operatordata->address }}</td>

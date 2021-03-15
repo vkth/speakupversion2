@@ -279,26 +279,27 @@
                                     
                                                 <div class="modal-body">
 
+                                                    
                                                     <div class="form-group">
-                                                        <label>Name</label>
-                                                        <input type="text" name="name" class="form-control" placeholder="Enter Fullname">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>Address</label>
-                                                        <input type="text" name="address" class="form-control" placeholder="Enter Address">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>Mobile Number</label>
-                                                        <input type="text" name="phone_number" class="form-control" placeholder="Enter Phone Number">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>Body Plate</label>
+                                                        <label>Body Plate:</label>
                                                         <input type="text" name="body_plate" class="form-control" placeholder="Enter Phone Number">
                                                     </div>
+
                                                     <div class="form-group">
-                                                        <label>Type of Vehicle</label>
+                                                        <label>Type of Vehicle:</label>
                                                         <input type="text" name="vehicle" class="form-control" placeholder="Enter Phone Number">
                                                     </div>
+                                                    
+                                                     <div class="form-group">
+                                                        <label>Status:</label>
+                                                        <input type="text" name="vehicle" class="form-control" placeholder="Enter Phone Number">
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        <label>Type Operators id no. :</label>
+                                                        <input type="text" name="vehicle" class="form-control" placeholder="Enter Phone Number">
+                                                    </div>
+
 
                                             
                                                 </div>

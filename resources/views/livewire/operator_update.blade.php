@@ -12,9 +12,21 @@
                 <form>
                     <div class="form-group">
                         <input type="hidden" wire:model="name">
-                        <label for="exampleFormControlInput1">Name</label>
+                        <label for="exampleFormControlInput1">Operator's Name</label>
                         <input type="text" class="form-control" wire:model="name" id="exampleFormControlInput1" placeholder="Enter Name">
                         @error('name') <span class="text-danger">{{ $message }}</span>@enderror
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" wire:model="address">
+                        <label for="exampleFormControlInput1">Operator's Address</label>
+                        <input type="text" class="form-control" wire:model="address" id="exampleFormControlInput1" placeholder="Enter Address">
+                        @error('address') <span class="text-danger">{{ $message }}</span>@enderror
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" wire:model="phone_number">
+                        <label for="exampleFormControlInput1">Mobile Number</label>
+                        <input type="text" class="form-control" wire:model="phone_number" id="exampleFormControlInput1" placeholder="Enter Mobile Number">
+                        @error('phone_number') <span class="text-danger">{{ $message }}</span>@enderror
                     </div>
                 </form>
             </div>

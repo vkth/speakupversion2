@@ -18,6 +18,8 @@ class Operators extends Component
 
     private function resetInputFields(){
         $this->name = '';
+        $this->address = '';
+        $this->phone_number = '';
         
     }
 
@@ -25,6 +27,8 @@ class Operators extends Component
     {
         $validatedDate = $this->validate([
             'name' => 'required',
+            'address' => 'required',
+            'phone_number' => 'required',
             
         ]);
 
@@ -40,9 +44,10 @@ class Operators extends Component
     {
         $this->updateMode = true;
         $operator = Operator::where('id',$id)->first();
-        $this->operator_id = $id;
+        $this->id = $id;
         $this->name = $operator->name;
-        
+        $this->address = $operator->address;
+        $this->phone_number = $operator->phone_number;
         
     }
 
@@ -51,21 +56,23 @@ class Operators extends Component
         $this->updateMode = false;
         $this->resetInputFields();
 
-
     }
 
     public function update()
     {
         $validatedDate = $this->validate([
             'name' => 'required',
+             'address' => 'required',
+              'phone_number' => 'required',
             
         ]);
 
-        if ($this->operator_id) {
-            $operator = Operator::find($this->operator_id);
+        if ($this->id) {
+            $operator = Operator::find($this->id);
             $operator->update([
                 'name' => $this->name,
-                
+                'address' => $this->address,
+                'phone_number' => $this->phone_number,
             ]);
             $this->updateMode = false;
             session()->flash('message', 'Operator Updated Successfully.');

@@ -20,9 +20,6 @@ class CreateVehiclesTable extends Migration
             $table->enum('status',["Certified", "Colorum"] );
             $table->unsignedBigInteger('operator_id');
             $table->unsignedBigInteger('admin_id');
-            $table->string('name');
-            $table->string('address');
-            $table->string('phone_number');
             $table->timestamps();
         });
     }

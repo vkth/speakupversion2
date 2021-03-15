@@ -14,14 +14,23 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('username');
+            
+            $table->increments('id');
+            $table->string('username')->unique();
             $table->string('role')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('address')->nullable();
             $table->string('password');
-            $table->rememberToken();
+            $table->boolean('is_password_temporary')->default(0);
+            $table->string('temporary_password')->nullable();
+            $table->enum('settings_color_accent', ['red','green', 'blue', 'orange','yellow', 'pink', 'purple', 'brown'])->nullable();
+            $table->boolean('is_disabled')->default(1);
+            $table->rememberToken();   
+            $table->softDeletes();
             $table->timestamps();
+
+        
         });
     }
 
