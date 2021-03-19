@@ -34,8 +34,8 @@
             <div class="lds-pos"></div>
         </div>
     </div>
-    <!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
+    
+  
     <!-- ============================================================== -->
     <div id="main-wrapper" data-navbarbg="skin6" data-theme="light" data-layout="vertical" data-sidebartype="full" data-boxed-layout="full">
        
@@ -50,7 +50,7 @@
                 $$ |    $$$$$$  |$$ |      $$$$$$$  |$$ |  $$ |$$ |  $$ |
                 \__|    \______/ \__|      \_______/ \__|  \__|\__|  \__|
                                             
-            Topbar header - style you can find in pages.scss -->
+            Topbar header --->
         <!-- ============================================================== -->
 
 
@@ -145,7 +145,8 @@
         </header>
 </body>
         
-<!--*************************************************************************************************************************************-->
+
+<!--*********************************************************************************-->
 <!--   
               $$$$$$\  $$$$$$\ $$$$$$$\  $$$$$$$$\ $$$$$$$\   $$$$$$\  $$$$$$$\  
              $$  __$$\ \_$$  _|$$  __$$\ $$  _____|$$  __$$\ $$  __$$\ $$  __$$\ 
@@ -156,8 +157,9 @@
             \$$$$$$  |$$$$$$\ $$$$$$$  |$$$$$$$$\ $$$$$$$  |$$ |  $$ |$$ |  $$ |
              \______/ \______|\_______/ \________|\_______/ \__|  \__|\__|  \__|                                                         -->
 
-<!--*************************************************************************************************************************************-->
-                <aside class="left-sidebar" data-sidebarbg="skin5">
+<!--**********************************************************************************-->
+
+            <aside class="left-sidebar" data-sidebarbg="skin5">
                     <div class="scroll-sidebar">
                         <nav class="sidebar-nav">
                             <ul id="sidebarnav">
@@ -215,15 +217,14 @@
                                         <span class="hide-menu">Mobile App Users</span>
                                     </a>
                                 </li>
-                                
                             </ul>
                         </nav>
-                    
                     </div>
-                
                 </aside>
+       
 
-            <!--
+
+        <!--
              $$$$$$$$\ $$$$$$\ $$$$$$$$\ $$\       $$$$$$$$\ 
              \__$$  __|\_$$  _|\__$$  __|$$ |      $$  _____|
                 $$ |     $$ |     $$ |   $$ |      $$ |      
@@ -242,14 +243,13 @@
                 $$ |  $$ |$$ |      $$ |  $$ |$$ |  $$ |        
                 $$ |  $$ |$$$$$$$$\ $$ |  $$ |$$$$$$$  |        
                 \__|  \__|\________|\__|  \__|\_______/         
-            --->                                   
-                                                
+        --->  
+
         <div class="page-wrapper">
-            
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-5 align-self-center">
-                        <h2 class="page-title">Welcome to Dashboard</h2>
+                        <h4 class="page-title">Mobile App Users</h4>
                     </div>
                     <div class="col-7 align-self-center">
                         <div class="d-flex align-items-center justify-content-end">
@@ -258,92 +258,73 @@
                                     <li class="breadcrumb-item">
                                         <a href="index">Home</a>
                                     </li>
-                                    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Mobile-app-users</li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            
-            <!-- ============================================================== -->
-            <!-- title head  title head title head title head title head -->
-            <!-- ============================================================== -->
-           
-            <!--
-            $$$$$$$\                  $$\           
-            $$  __$$\                 $$ |          
-            $$ |  $$ | $$$$$$\   $$$$$$$ |$$\   $$\ 
-            $$$$$$$\ |$$  __$$\ $$  __$$ |$$ |  $$ |
-            $$  __$$\ $$ /  $$ |$$ /  $$ |$$ |  $$ |
-            $$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |
-            $$$$$$$  |\$$$$$$  |\$$$$$$$ |\$$$$$$$ |
-            \_______/  \______/  \_______| \____$$ |
-                                        $$\   $$ |
-                                        \$$$$$$  |
-                                        \______/ -->
-
-            <!-- ============================================================== -->
-            <!--Body Body Body Body Body Body Body Body Body Body Body Body Body-->
-            <!-- ============================================================== -->
-
             <div class="container-fluid">
+
+
+<!-- ===================================================================================================================== -->
+
+<!-- Start Page Content 
+
+        $$$$$$$\   $$$$$$\   $$$$$$\  $$$$$$$$\        $$$$$$\   $$$$$$\  $$\   $$\ $$$$$$$$\ $$$$$$$$\ $$\   $$\ $$$$$$$$\ 
+        $$  __$$\ $$  __$$\ $$  __$$\ $$  _____|      $$  __$$\ $$  __$$\ $$$\  $$ |\__$$  __|$$  _____|$$$\  $$ |\__$$  __|
+        $$ |  $$ |$$ /  $$ |$$ /  \__|$$ |            $$ /  \__|$$ /  $$ |$$$$\ $$ |   $$ |   $$ |      $$$$\ $$ |   $$ |   
+        $$$$$$$  |$$$$$$$$ |$$ |$$$$\ $$$$$\          $$ |      $$ |  $$ |$$ $$\$$ |   $$ |   $$$$$\    $$ $$\$$ |   $$ |   
+        $$  ____/ $$  __$$ |$$ |\_$$ |$$  __|         $$ |      $$ |  $$ |$$ \$$$$ |   $$ |   $$  __|   $$ \$$$$ |   $$ |   
+        $$ |      $$ |  $$ |$$ |  $$ |$$ |            $$ |  $$\ $$ |  $$ |$$ |\$$$ |   $$ |   $$ |      $$ |\$$$ |   $$ |   
+        $$ |      $$ |  $$ |\$$$$$$  |$$$$$$$$\       \$$$$$$  | $$$$$$  |$$ | \$$ |   $$ |   $$$$$$$$\ $$ | \$$ |   $$ |   
+        \__|      \__|  \__| \______/ \________|       \______/  \______/ \__|  \__|   \__|   \________|\__|  \__|   \__|   
+
+
+=========================================================================================================================== -->
+               
                 <div class="row">
-
-                    <!-- 
-                    $$\        $$$$$$\ $$$$$$$$\ $$$$$$$$\  $$$$$$\ $$$$$$$$\            
-                    $$ |      $$  __$$\\__$$  __|$$  _____|$$  __$$\\__$$  __|           
-                    $$ |      $$ /  $$ |  $$ |   $$ |      $$ /  \__|  $$ |              
-                    $$ |      $$$$$$$$ |  $$ |   $$$$$\    \$$$$$$\    $$ |              
-                    $$ |      $$  __$$ |  $$ |   $$  __|    \____$$\   $$ |              
-                    $$ |      $$ |  $$ |  $$ |   $$ |      $$\   $$ |  $$ |              
-                    $$$$$$$$\ $$ |  $$ |  $$ |   $$$$$$$$\ \$$$$$$  |  $$ |              
-                    \________|\__|  \__|  \__|   \________| \______/   \__|              
-
-                    
-                    $$$$$$$\  $$$$$$$$\ $$$$$$$\   $$$$$$\  $$$$$$$\ $$$$$$$$\  $$$$$$\  
-                    $$  __$$\ $$  _____|$$  __$$\ $$  __$$\ $$  __$$\\__$$  __|$$  __$$\ 
-                    $$ |  $$ |$$ |      $$ |  $$ |$$ /  $$ |$$ |  $$ |  $$ |   $$ /  \__|
-                    $$$$$$$  |$$$$$\    $$$$$$$  |$$ |  $$ |$$$$$$$  |  $$ |   \$$$$$$\  
-                    $$  __$$< $$  __|   $$  ____/ $$ |  $$ |$$  __$$<   $$ |    \____$$\ 
-                    $$ |  $$ |$$ |      $$ |      $$ |  $$ |$$ |  $$ |  $$ |   $$\   $$ |
-                    $$ |  $$ |$$$$$$$$\ $$ |       $$$$$$  |$$ |  $$ |  $$ |   \$$$$$$  |
-                    \__|  \__|\________|\__|       \______/ \__|  \__|  \__|    \______/ 
-                    -->
-
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Latest Reports</h4>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th class="border-top-0">TYPE OF REPORTS</th>
-                                            <th class="border-top-0">PUV</th>
-                                            <th class="border-top-0">DATE</th>
-                                            <th class="border-top-0">STATUS</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            
-                                            <td class="txt-oflo">Elite admin</td>
-                                            <td><span class="label label-success label-rounded">SALE</span> </td>
-                                            <td class="txt-oflo">April 18, 2017</td>
-                                            <td><span class="font-medium">$24</span></td>
-                                        </tr>
+                                    <h6 class="card-subtitle">Mobile App Users are Updated real-time.</h6>
+                                    <div class="table-responsive">
+                                        <div class="panel panel-default">
                                     
-                                    </tbody>
-                                </table>
+                                            <div class="panel-body">
+                                                <table class="table" id="datatable" border="0" cellpadding="2" cellspacing="1" class="pretty" style="width:100%">
+                            
+                                                    <thead>
+                                                        <tr>
+                                                            <th>User ID</th>
+                                                            <th>Name</th>
+                                                            <th>Username</th>
+                                                            <th>Address</th>
+                                                            <th>Email</th>
+                                                            <th>Status</th>
+                                                        </tr> 
+                                                    </thead>
+                                                        @foreach ($mobileappusers as $appusers)
+                                                            <tr>
+                                                                <td>{{ $appusers->id}}</td>
+                                                                <td>{{ $appusers->name }}</td>
+                                                                <td>{{ $appusers->username }}</td> 
+                                                                <td>{{ $appusers->email }}</td> 
+                                                                <td>{{ $appusers->status }}</td>
+                                                            </tr>
+                                                        @endforeach
+                                                    
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-          
+
             <!-- footer 
             $$$$$$$$\                   $$\                         
             $$  _____|                  $$ |                        
@@ -355,17 +336,17 @@
             \__|    \______/  \______/   \____/  \_______|\__|      
             -->
             <!-- ============================================================== -->
+            
             <footer class="footer text-center">
-                2021. All Rights Reserved By Ateneo de Naga Univertsity. 
+                 2021. All Rights Reserved By Ateneo de Naga Univertsity. 
                 Designed and Developed by Delas Alas, Ferrer, and San Joaquin
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
         </div>
-        
     </div>
-    
+   
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
@@ -381,11 +362,6 @@
     <script src="../../dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="../../dist/js/custom.min.js"></script>
-    <!--This page JavaScript -->
-    <!--chartis chart-->
-    <script src="../../assets/libs/chartist/dist/chartist.min.js"></script>
-    <script src="../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-    <script src="../../dist/js/pages/dashboards/dashboard1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
@@ -405,7 +381,5 @@
     });
     </script>
 </body>
-<script src="{{ asset('js/app.js') }}"></script>
-@livewireScripts
 
 </html>

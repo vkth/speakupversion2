@@ -22,11 +22,6 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('address')->nullable();
             $table->string('password');
-            $table->boolean('is_password_temporary')->default(0);
-            $table->string('temporary_password')->nullable();
-            $table->enum('settings_color_accent', ['red','green', 'blue', 'orange','yellow', 'pink', 'purple', 'brown'])->nullable();
-            $table->boolean('is_disabled')->default(1);
-            $table->rememberToken();   
             $table->softDeletes();
             $table->timestamps();
 

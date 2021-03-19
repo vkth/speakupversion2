@@ -163,13 +163,6 @@
                         </li>
 
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="operators" aria-expanded="false">
-                                <i class="mdi mdi-account-multiple"></i>
-                                <span class="hide-menu">PUV Operators</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link dropdown-toggle" href="#pageSubmenu" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
                                 <i class="mdi mdi-folder-multiple"></i>
                                 <span class="hide-menu">Reports</span></a>
@@ -195,25 +188,29 @@
                                 </ul>
                             </a>
                         </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="operators" aria-expanded="false">
+                                <i class="mdi mdi-account-multiple"></i>
+                                <span class="hide-menu">P.U.V. - Operators</span>
+                            </a>
+                        </li>
+
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="vehicles" aria-expanded="false">
                                 <i class="mdi mdi-car"></i>
-                                <span class="hide-menu">Vehicles</span>
+                                <span class="hide-menu">Public Utility Vehicles</span>
                             </a>
                         </li>
-
+                        
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false">
                                 <i class="mdi mdi-cellphone"></i>
-                                <span class="hide-menu">Mobile Users</span>
+                                <span class="hide-menu">Mobile App Users</span>
                             </a>
                         </li>
-
-                        
-                        
                     </ul>
                 </nav>
-               
             </div>
            
     </aside>
@@ -429,8 +426,8 @@
                  \__|       \______/  \______/   \__|   \________|\__|  \__|->
             <!-- ============================================================== -->
             <footer class="footer text-center">
-                All Rights Reserved by Nice admin. Designed and Developed by
-                <a href="https://wrappixel.com">WrapPixel</a>.
+                 2021. All Rights Reserved By Ateneo de Naga Univertsity. 
+                Designed and Developed by Delas Alas, Ferrer, and San Joaquin
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->

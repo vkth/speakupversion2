@@ -8,5 +8,11 @@ use Carbon\Carbon;
 class Operator extends Model
 {
     protected $fillable = ['name'];
+
+    public function vehicles(){
+         
+        return $this->hasMany('App\Vehicle');
+
+    }
 }
 

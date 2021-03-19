@@ -163,13 +163,6 @@
                         </li>
 
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="operators" aria-expanded="false">
-                                <i class="mdi mdi-account-multiple"></i>
-                                <span class="hide-menu">PUV Operators</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link dropdown-toggle" href="#pageSubmenu" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
                                 <i class="mdi mdi-folder-multiple"></i>
                                 <span class="hide-menu">Reports</span></a>
@@ -195,20 +188,27 @@
                                 </ul>
                             </a>
                         </li>
+
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="vehicles" aria-expanded="false">
-                                <i class="mdi mdi-car"></i>
-                                <span class="hide-menu">Vehicles</span>
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="operators" aria-expanded="false">
+                                <i class="mdi mdi-account-multiple"></i>
+                                <span class="hide-menu">P.U.V. - Operators</span>
                             </a>
                         </li>
 
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false">
-                                <i class="mdi mdi-cellphone"></i>
-                                <span class="hide-menu">Mobile Users</span>
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="vehicles" aria-expanded="false">
+                                <i class="mdi mdi-car"></i>
+                                <span class="hide-menu">Public Utility Vehicles</span>
                             </a>
                         </li>
                         
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false">
+                                <i class="mdi mdi-cellphone"></i>
+                                <span class="hide-menu">Mobile App Users</span>
+                            </a>
+                        </li>
                         
                     </ul>
                 </nav>
@@ -282,26 +282,93 @@
                                                     
                                                     <div class="form-group">
                                                         <label>Body Plate:</label>
-                                                        <input type="text" name="body_plate" class="form-control" placeholder="Enter Phone Number">
+                                                        <input type="text" name="body_plate" class="form-control" placeholder="Enter Body plate">
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label>Type of Vehicle:</label>
-                                                        <input type="text" name="vehicle" class="form-control" placeholder="Enter Phone Number">
+                                                        <input type="text" name="vehicle" class="form-control" placeholder="Enter Vehicle">
                                                     </div>
                                                     
                                                      <div class="form-group">
                                                         <label>Status:</label>
-                                                        <input type="text" name="vehicle" class="form-control" placeholder="Enter Phone Number">
+                                                        <input type="text" name="status" class="form-control" placeholder="Enter Status">
                                                     </div>
                                                     
-                                                    <div class="form-group">
-                                                        <label>Type Operators id no. :</label>
-                                                        <input type="text" name="vehicle" class="form-control" placeholder="Enter Phone Number">
-                                                    </div>
-
+                                                    
+                                                        <input type="hidden" name="operator_id" id="operator_id" value="1"  >
+                                                    
 
                                             
+                                                </div>
+                                    
+                                                <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        <button type="submit" class="btn btn-primary">Create New Vehicle</button>
+                                                </div>
+                                            
+                                </form>        
+
+                            </div>
+                        </div>
+                    </div>
+        <!-- End Add Modal -->
+        <!--
+            $$$$$$$$\ $$$$$$$\  $$$$$$\ $$$$$$$$\                
+            $$  _____|$$  __$$\ \_$$  _|\__$$  __|               
+            $$ |      $$ |  $$ |  $$ |     $$ |                  
+            $$$$$\    $$ |  $$ |  $$ |     $$ |                  
+            $$  __|   $$ |  $$ |  $$ |     $$ |                  
+            $$ |      $$ |  $$ |  $$ |     $$ |                  
+            $$$$$$$$\ $$$$$$$  |$$$$$$\    $$ |                  
+            \________|\_______/ \______|   \__|                  
+                                                                
+            $$\      $$\  $$$$$$\  $$$$$$$\   $$$$$$\  $$\       
+            $$$\    $$$ |$$  __$$\ $$  __$$\ $$  __$$\ $$ |      
+            $$$$\  $$$$ |$$ /  $$ |$$ |  $$ |$$ /  $$ |$$ |      
+            $$\$$\$$ $$ |$$ |  $$ |$$ |  $$ |$$$$$$$$ |$$ |      
+            $$ \$$$  $$ |$$ |  $$ |$$ |  $$ |$$  __$$ |$$ |      
+            $$ |\$  /$$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |      
+            $$ | \_/ $$ | $$$$$$  |$$$$$$$  |$$ |  $$ |$$$$$$$$\ 
+            \__|     \__| \______/ \_______/ \__|  \__|\________|
+        -->
+
+        <!-- Start Edit Modal -->
+                    <div class="modal fade" id="editvehicleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                                
+                            
+                               <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="editvehicleModalLabel">Edit Vehicle</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                </div>
+
+                                <form action="{{ route('vehicle.update') }}" id="editvehicleform" method="POST">
+                                    @csrf
+                                    @method('PUT')                            
+                                    
+                                                <div class="modal-body">
+
+                                                    
+                                                    <div class="form-group">
+                                                        <label>Body Plate:</label>
+                                                        <input type="text" name="body_plate" class="form-control" placeholder="Enter Body plate">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label>Type of Vehicle:</label>
+                                                        <input type="text" name="vehicle" class="form-control" placeholder="Enter Vehicle">
+                                                    </div>
+                                                    
+                                                     <div class="form-group">
+                                                        <label>Status:</label>
+                                                        <input type="text" name="status" class="form-control" placeholder="Enter Status">
+                                                    </div>
+                                                    
+                                                    
                                                 </div>
                                     
                                                 <div class="modal-footer">
@@ -314,7 +381,59 @@
                             </div>
                         </div>
                     </div>
-        <!-- End Add Modal -->
+        <!-- End Delete Modal -->
+        <!--            
+        $$$$$$$\  $$$$$$$$\ $$\       $$$$$$$$\ $$$$$$$$\ $$$$$$$$\ 
+        $$  __$$\ $$  _____|$$ |      $$  _____|\__$$  __|$$  _____|
+        $$ |  $$ |$$ |      $$ |      $$ |         $$ |   $$ |      
+        $$ |  $$ |$$$$$\    $$ |      $$$$$\       $$ |   $$$$$\    
+        $$ |  $$ |$$  __|   $$ |      $$  __|      $$ |   $$  __|   
+        $$ |  $$ |$$ |      $$ |      $$ |         $$ |   $$ |      
+        $$$$$$$  |$$$$$$$$\ $$$$$$$$\ $$$$$$$$\    $$ |   $$$$$$$$\ 
+        \_______/ \________|\________|\________|   \__|   \________|
+                                                                    
+        $$\      $$\  $$$$$$\  $$$$$$$\   $$$$$$\  $$\              
+        $$$\    $$$ |$$  __$$\ $$  __$$\ $$  __$$\ $$ |             
+        $$$$\  $$$$ |$$ /  $$ |$$ |  $$ |$$ /  $$ |$$ |             
+        $$\$$\$$ $$ |$$ |  $$ |$$ |  $$ |$$$$$$$$ |$$ |             
+        $$ \$$$  $$ |$$ |  $$ |$$ |  $$ |$$  __$$ |$$ |             
+        $$ |\$  /$$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |             
+        $$ | \_/ $$ | $$$$$$  |$$$$$$$  |$$ |  $$ |$$$$$$$$\        
+        \__|     \__| \______/ \_______/ \__|  \__|\________| -->      
+
+
+        <!--Confirm Delete Modal-->
+                     <div class="modal fade" id="confirmdeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                                
+                            
+                               <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="confirmdeleteModalLabel">Are you sure you want to delete?</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                </div>
+
+
+                                                <div class="modal-footer">
+                                                    <form action="" id="deletevehicleform" method="POST">
+                                                        @csrf 
+                                                        @method('DELETE')
+                                                    </form>
+                                                    
+                                                    <button type="button" id="yesconfirmdelete" vehicle_id="" class="btn btn-primary">Yes</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                                                </div>
+                                            
+                                    
+
+                            </div>
+                        </div>
+                    </div>
+
+
+        <!--End Confirm Delete Modal-->
 
 <!--******************************************************************************************************************************************************-->
             
@@ -346,8 +465,24 @@
 
                         <br></br>
 
-      
-            
+            <!--$$\    $$\ $$$$$$$$\ $$\   $$\ $$$$$$\  $$$$$$\  $$\       $$$$$$$$\ 
+                $$ |   $$ |$$  _____|$$ |  $$ |\_$$  _|$$  __$$\ $$ |      $$  _____|
+                $$ |   $$ |$$ |      $$ |  $$ |  $$ |  $$ /  \__|$$ |      $$ |      
+                \$$\  $$  |$$$$$\    $$$$$$$$ |  $$ |  $$ |      $$ |      $$$$$\    
+                 \$$\$$  / $$  __|   $$  __$$ |  $$ |  $$ |      $$ |      $$  __|   
+                  \$$$  /  $$ |      $$ |  $$ |  $$ |  $$ |  $$\ $$ |      $$ |      
+                   \$  /   $$$$$$$$\ $$ |  $$ |$$$$$$\ \$$$$$$  |$$$$$$$$\ $$$$$$$$\ 
+                    \_/    \________|\__|  \__|\______| \______/ \________|\________|
+                                                                                    
+                      $$$$$$$$\  $$$$$$\  $$$$$$$\  $$\       $$$$$$$$\                    
+                     \__$$  __|$$  __$$\ $$  __$$\ $$ |      $$  _____|                   
+                        $$ |   $$ /  $$ |$$ |  $$ |$$ |      $$ |                         
+                        $$ |   $$$$$$$$ |$$$$$$$\ |$$ |      $$$$$\                       
+                        $$ |   $$  __$$ |$$  __$$\ $$ |      $$  __|                      
+                        $$ |   $$ |  $$ |$$ |  $$ |$$ |      $$ |                         
+                        $$ |   $$ |  $$ |$$$$$$$  |$$$$$$$$\ $$$$$$$$\                    
+                        \__|   \__|  \__|\_______/ \________|\________|  -->
+                            
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
@@ -367,6 +502,7 @@
                                                             <th>Operator Name</th>
                                                             <th>Operator Contact</th>
                                                             <th>Operator Address</th>
+                                                            <th>Action</th>
                                                     
                                                         </tr> 
                                                     </thead>
@@ -378,6 +514,10 @@
                                                                 <td>{{ $vehicle->name }}</td>
                                                                 <td>{{ $vehicle->phone_number }}</td>
                                                                 <td>{{ $vehicle->address }}</td>
+                                                                <td>
+                                                                      <button class="btn btn-success edit-vehicle-btn" vehicle_id={{ $vehicle->id }} > EDIT </button>  
+                                                                      <button class="btn btn-danger delete-vehicle-btn" vehicle_id={{ $vehicle->id }} > DELETE </button>
+                                                                </td>
                                                             </tr>
                                                         @endforeach
                                                     
@@ -386,32 +526,11 @@
                                         </div>
                                     </div>
                             </div>
-                            
                         </div>
                     </div>
-                
-                    
                 </div>
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Right sidebar -->
-                <!-- ============================================================== -->
-                <!-- .right-sidebar -->
-                <!-- ============================================================== -->
-                <!-- End Right sidebar -->
-                <!-- ============================================================== -->
             </div>
-
             
-            
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
 
             <!-- footer ************************************************************
 
@@ -428,20 +547,12 @@
 
 
             <footer class="footer text-center">
-                All Rights Reserved by Nice admin. Designed and Developed by
-                <a href="https://wrappixel.com">WrapPixel</a>.
+                 2021. All Rights Reserved By Ateneo de Naga Univertsity. 
+                Designed and Developed by Delas Alas, Ferrer, and San Joaquin
             </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
         </div>
-        <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
-        <!-- ============================================================== -->
     </div>
-    <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
+    
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
@@ -457,7 +568,7 @@
     <script src="../../dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="../../dist/js/custom.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>-->
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script>
@@ -473,8 +584,28 @@
             dom: 'Bfrtip',
             buttons: ['csv', 'excel', 'pdf', 'print']
         });
+
+        
+        $('body').on('click', '.edit-vehicle-btn', function () {
+            var vehicle_id=$(this).attr('vehicle_id');
+            $('#editvehicleform').attr('action', '/vehicles/'+vehicle_id);
+            $('#editvehicleModal').modal('show');
+        });
+
+        $('body').on('click', '.delete-vehicle-btn', function () {
+            var vehicle_id=$(this).attr('vehicle_id');
+            $('#yesconfirmdelete').attr('vehicle_id', vehicle_id);
+            $('#confirmdeleteModal').modal('show');
+        });
+        
+        $('#yesconfirmdelete').click(function(){
+            var vehicle_id=$(this).attr('vehicle_id');
+            $('#deletevehicleform').attr('action', '/vehicles/'+vehicle_id);
+            $('#deletevehicleform').submit();
+        });
     });
-    </script>
+
+</script>
 </body>
 
 </html>

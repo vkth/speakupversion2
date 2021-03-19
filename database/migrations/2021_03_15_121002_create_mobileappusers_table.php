@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAppusersTable extends Migration
+class CreateMobileappusersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateAppusersTable extends Migration
      */
     public function up()
     {
-        Schema::create('appusers', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('mobileappusers', function (Blueprint $table) {
+            $table->id();
             $table->string('username');
             $table->string('name');
             $table->string('email');
@@ -24,7 +24,6 @@ class CreateAppusersTable extends Migration
             $table->enum('status',["Verified", "Not verified"] );
             $table->unsignedBigInteger('admin_id');
             $table->timestamps();
-            
         });
     }
 
@@ -35,6 +34,6 @@ class CreateAppusersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('appusers');
+        Schema::dropIfExists('mobileappusers');
     }
 }

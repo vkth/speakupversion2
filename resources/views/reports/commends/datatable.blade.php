@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
-    <title>Nice admin Template - The Ultimate Multipurpose admin template</title>
+    <title>Speak Up - Naga</title>
     <!-- Custom CSS -->
     <link href="../../dist/css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -38,9 +38,22 @@
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
     <div id="main-wrapper" data-navbarbg="skin6" data-theme="light" data-layout="vertical" data-sidebartype="full" data-boxed-layout="full">
+       
         <!-- ============================================================== -->
-        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- 
+             $$$$$$$$\  $$$$$$\  $$$$$$$\  $$$$$$$\   $$$$$$\  $$$$$$$\  
+             \__$$  __|$$  __$$\ $$  __$$\ $$  __$$\ $$  __$$\ $$  __$$\ 
+                $$ |   $$ /  $$ |$$ |  $$ |$$ |  $$ |$$ /  $$ |$$ |  $$ |
+                $$ |   $$ |  $$ |$$$$$$$  |$$$$$$$\ |$$$$$$$$ |$$$$$$$  |
+                $$ |   $$ |  $$ |$$  ____/ $$  __$$\ $$  __$$ |$$  __$$< 
+                $$ |   $$ |  $$ |$$ |      $$ |  $$ |$$ |  $$ |$$ |  $$ |
+                $$ |    $$$$$$  |$$ |      $$$$$$$  |$$ |  $$ |$$ |  $$ |
+                \__|    \______/ \__|      \_______/ \__|  \__|\__|  \__|
+                                            
+            Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
+
+
         <header class="topbar" data-navbarbg="skin6">
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                 <div class="navbar-header" data-logobg="skin5">
@@ -48,11 +61,24 @@
                     <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
                         <i class="ti-menu ti-close"></i>
                     </a>
+                   
+                   
                     <!-- ============================================================== -->
-                    <!-- Logo -->
+                    <!-- Logo 
+                    $$\       $$$$$$\   $$$$$$\   $$$$$$\  
+                    $$ |     $$  __$$\ $$  __$$\ $$  __$$\ 
+                    $$ |     $$ /  $$ |$$ /  \__|$$ /  $$ |
+                    $$ |     $$ |  $$ |$$ |$$$$\ $$ |  $$ |
+                    $$ |     $$ |  $$ |$$ |\_$$ |$$ |  $$ |
+                    $$ |     $$ |  $$ |$$ |  $$ |$$ |  $$ |
+                    $$$$$$$$\ $$$$$$  |\$$$$$$  | $$$$$$  |
+                    \________|\______/  \______/  \______/ -->
                     <!-- ============================================================== -->
+
+
+
                     <div class="navbar-brand">
-                        <a href="index" class="logo">
+                        <a href="./" class="logo">
                             <!-- Logo icon -->
                             <b class="logo-icon">
                                 <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
@@ -74,46 +100,21 @@
                     <!-- ============================================================== -->
                     <!-- End Logo -->
                     <!-- ============================================================== -->
-                    <!-- ============================================================== -->
-                    <!-- Toggle which is visible on mobile only -->
-                    <!-- ============================================================== -->
+                   
                     <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)" data-toggle="collapse" data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="ti-more"></i>
                     </a>
                 </div>
-                <!-- ============================================================== -->
-                <!-- End Logo -->
-                <!-- ============================================================== -->
+
+                <!-- ============================================================================== -->
+                <!-- ============================================================================== -->
+
                 <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin6">
-                    <!-- ============================================================== -->
-                    <!-- toggle and nav items -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav float-left mr-auto">
-                        <!-- ============================================================== -->
-                        <!-- Search -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item search-box">
-                            <a class="nav-link waves-effect waves-dark" href="javascript:void(0)">
-                                <div class="d-flex align-items-center">
-                                    <i class="mdi mdi-magnify font-20 mr-1"></i>
-                                    <div class="ml-1 d-none d-sm-block">
-                                        <span>Search</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <form class="app-search position-absolute">
-                                <input type="text" class="form-control" placeholder="Search &amp; enter">
-                                <a class="srh-btn">
-                                    <i class="ti-close"></i>
-                                </a>
-                            </form>
-                        </li>
-                    </ul>
-                    <!-- ============================================================== -->
-                    <!-- Right side toggle and nav items -->
-                    <!-- ============================================================== -->
+                   
                     <ul class="navbar-nav float-right">
+
+
                         <!-- ===========================Logout =================================== -->
                         <!-- 
                         $$\       $$$$$$\   $$$$$$\   $$$$$$\  $$\   $$\ $$$$$$$$\ 
@@ -125,37 +126,27 @@
                         $$$$$$$$\ $$$$$$  |\$$$$$$  | $$$$$$  |\$$$$$$  |   $$ |   
                         \________|\______/  \______/  \______/  \______/    \__| -->
                         <!-- =============================Logout ================================= -->
+  
                         
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                Admin
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
+                        <li class="nav-item d-none d-md-block ">
+                            <a href="{{ url('/logout') }}" class="nav-link "
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> 
+                            <i class="mdi mdi-logout"></i> Logout </a>
+                            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                            @csrf
+                            </form>
                         </li>
-                        
                         <!-- ============================================================== -->
-                        <!-- User LOGOUT -->
+                        <!-- End of LOGOUT -->
                         <!-- ============================================================== -->
                     </ul>
                 </div>
             </nav>
         </header>
-        <!-- ============================================================== -->
-        <!-- End Topbar header -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Left Sidebar - style you can find in sidebar.scss  
+</body>
+        
+<!--*************************************************************************************************************************************-->
+<!--   
               $$$$$$\  $$$$$$\ $$$$$$$\  $$$$$$$$\ $$$$$$$\   $$$$$$\  $$$$$$$\  
              $$  __$$\ \_$$  _|$$  __$$\ $$  _____|$$  __$$\ $$  __$$\ $$  __$$\ 
             $$ /  \__|  $$ |  $$ |  $$ |$$ |      $$ |  $$ |$$ /  $$ |$$ |  $$ |
@@ -163,84 +154,78 @@
              \____$$\   $$ |  $$ |  $$ |$$  __|   $$  __$$\ $$  __$$ |$$  __$$< 
             $$\   $$ |  $$ |  $$ |  $$ |$$ |      $$ |  $$ |$$ |  $$ |$$ |  $$ |
             \$$$$$$  |$$$$$$\ $$$$$$$  |$$$$$$$$\ $$$$$$$  |$$ |  $$ |$$ |  $$ |
-             \______/ \______|\_______/ \________|\_______/ \__|  \__|\__|  \__|-->
-        <!-- ============================================================== -->
-        <aside class="left-sidebar" data-sidebarbg="skin5">
-            <!-- Sidebar scroll-->
-            <div class="scroll-sidebar">
-                <!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="./" aria-expanded="false">
-                                <i class="mdi mdi-av-timer"></i>
-                                <span class="hide-menu">Dashboard</span>
-                            </a>
-                        </li>
+             \______/ \______|\_______/ \________|\_______/ \__|  \__|\__|  \__|                                                         -->
 
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="operators" aria-expanded="false">
-                                <i class="mdi mdi-account-multiple"></i>
-                                <span class="hide-menu">PUV Operators</span>
-                            </a>
-                        </li>
+<!--*************************************************************************************************************************************-->
+                <aside class="left-sidebar" data-sidebarbg="skin5">
+                    <div class="scroll-sidebar">
+                        <nav class="sidebar-nav">
+                            <ul id="sidebarnav">
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="./" aria-expanded="false">
+                                        <i class="mdi mdi-av-timer"></i>
+                                        <span class="hide-menu">Dashboard</span>
+                                    </a>
+                                </li>
 
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link dropdown-toggle" href="#pageSubmenu" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
-                                <i class="mdi mdi-folder-multiple"></i>
-                                <span class="hide-menu">Reports</span></a>
-                                <ul class="collapse list-unstyled" id="pageSubmenu">
-                                    <li>
-                                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="commends" aria-expanded="false">
-                                            <i class="mdi mdi-forum"></i>
-                                            <span class="hide-menu">Commendations</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="complaints" aria-expanded="false">
-                                            <i class="mdi mdi-forum"></i>
-                                            <span class="hide-menu">Complaints</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="reviews" aria-expanded="false">
-                                            <i class="mdi mdi-forum"></i>
-                                            <span class="hide-menu">Reviews</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="vehicles" aria-expanded="false">
-                                <i class="mdi mdi-car"></i>
-                                <span class="hide-menu">Vehicles</span>
-                            </a>
-                        </li>
-                        
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false">
-                                <i class="mdi mdi-cellphone"></i>
-                                <span class="hide-menu">Mobile Users</span>
-                            </a>
-                        </li>
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link waves-effect waves-dark sidebar-link dropdown-toggle" href="#pageSubmenu" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
+                                        <i class="mdi mdi-folder-multiple"></i>
+                                        <span class="hide-menu">Reports</span></a>
+                                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                                            <li>
+                                                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="commends" aria-expanded="false">
+                                                    <i class="mdi mdi-forum"></i>
+                                                    <span class="hide-menu">Commendations</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="complaints" aria-expanded="false">
+                                                    <i class="mdi mdi-forum"></i>
+                                                    <span class="hide-menu">Complaints</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="reviews" aria-expanded="false">
+                                                    <i class="mdi mdi-forum"></i>
+                                                    <span class="hide-menu">Reviews</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </a>
+                                </li>
 
-                    </ul>
-                </nav>
-                <!-- End Sidebar navigation -->
-            </div>
-            <!-- End Sidebar scroll-->
-        </aside>
-        <!-- ============================================================== -->
-        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="operators" aria-expanded="false">
+                                        <i class="mdi mdi-account-multiple"></i>
+                                        <span class="hide-menu">P.U.V. - Operators</span>
+                                    </a>
+                                </li>
+
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="vehicles" aria-expanded="false">
+                                        <i class="mdi mdi-car"></i>
+                                        <span class="hide-menu">Public Utility Vehicles</span>
+                                    </a>
+                                </li>
+                                
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="mobileappusers" aria-expanded="false">
+                                        <i class="mdi mdi-cellphone"></i>
+                                        <span class="hide-menu">Mobile App Users</span>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </nav>
+                    
+                    </div>
+                
+                </aside>
         <!-- ============================================================== -->
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
         <div class="page-wrapper">
-            <!-- ============================================================== -->
-            <!-- Bread crumb and right sidebar toggle -->
-            <!-- ============================================================== -->
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-5 align-self-center">
@@ -260,15 +245,11 @@
                     </div>
                 </div>
             </div>
-            <!-- ============================================================== -->
-            <!-- End Bread crumb and right sidebar toggle -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- Container fluid  -->
-            <!-- ============================================================== -->
+           
             <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- Start Page Content 
+        
+<!-- ================================================================================================================================== -->
+<!-- Start Page Content 
                     $$$$$$$\   $$$$$$\   $$$$$$\  $$$$$$$$\        $$$$$$\   $$$$$$\  $$\   $$\ $$$$$$$$\ $$$$$$$$\ $$\   $$\ $$$$$$$$\ 
                     $$  __$$\ $$  __$$\ $$  __$$\ $$  _____|      $$  __$$\ $$  __$$\ $$$\  $$ |\__$$  __|$$  _____|$$$\  $$ |\__$$  __|
                     $$ |  $$ |$$ /  $$ |$$ /  \__|$$ |            $$ /  \__|$$ /  $$ |$$$$\ $$ |   $$ |   $$ |      $$$$\ $$ |   $$ |   
@@ -277,7 +258,8 @@
                     $$ |      $$ |  $$ |$$ |  $$ |$$ |            $$ |  $$\ $$ |  $$ |$$ |\$$$ |   $$ |   $$ |      $$ |\$$$ |   $$ |   
                     $$ |      $$ |  $$ |\$$$$$$  |$$$$$$$$\       \$$$$$$  | $$$$$$  |$$ | \$$ |   $$ |   $$$$$$$$\ $$ | \$$ |   $$ |   
                     \__|      \__|  \__| \______/ \________|       \______/  \______/ \__|  \__|   \__|   \________|\__|  \__|   \__|   
-                ============================================================== -->
+======================================================================================================================================= -->
+
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
@@ -285,7 +267,6 @@
                                     <h6 class="card-subtitle">Commendations are Updated real-time.</h6>
                                     <div class="table-responsive">
                                         <div class="panel panel-default">
-                                    
                                             <div class="panel-body">
                                                 <table class="table" id="datatable" border="0" cellpadding="2" cellspacing="1" class="pretty" style="width:100%">
                             
@@ -308,41 +289,23 @@
                                                                 <td>{{ $commend->narrative }}</td>
                                                             </tr>
                                                         @endforeach
-                                                    
                                                 </table>
                                             </div>
                                         </div>
                                     </div>
                             </div>
-                            
                         </div>
                     </div>
-                
-                    
                 </div>
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Right sidebar -->
-                <!-- ============================================================== -->
-                <!-- .right-sidebar -->
-                <!-- ============================================================== -->
-                <!-- End Right sidebar -->
-                <!-- ============================================================== -->
             </div>
 
-            
-            
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
+           
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
             <footer class="footer text-center">
-                All Rights Reserved by Nice admin. Designed and Developed by
-                <a href="https://wrappixel.com">WrapPixel</a>.
+              2021. All Rights Reserved By Ateneo de Naga Univertsity. 
+                Designed and Developed by Delas Alas, Ferrer, and San Joaquin
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->

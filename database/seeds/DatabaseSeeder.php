@@ -6,7 +6,7 @@ use App\Commendation;
 use App\Review;
 use App\User;
 use App\Verify;
-use App\Appuser;
+use App\Mobileappuser;
 use App\Vehicle;
 use App\Operator;
 
@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
     $user->password=bcrypt('password');
     $user->save();
 
-    factory(Appuser::class,50)->create();
+    factory(Mobileappuser::class,50)->create();
     
     // $this->call(UsersTableSeeder::class);
     factory(Complaint::class,50)->create();

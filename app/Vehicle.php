@@ -7,5 +7,10 @@ use Carbon\Carbon;
 
 class Vehicle extends Model
 {
-      protected $fillable = ['name'];
+      protected $fillable = ['status', 'body_plate', 'vehicle', 'admin_id'];
+
+      public function operator(){
+            return $this->belongsTo('App\Operator');
+      }
+
 }

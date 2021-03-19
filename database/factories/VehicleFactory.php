@@ -12,8 +12,6 @@ $factory->define(Vehicle::class, function (Faker $faker) {
         'admin_id' => $faker->numberBetween(1,999),
         'vehicle' =>$faker->numberBetween(1,4),
         'status'=>$faker->numberBetween(1,2),
-        'name' => $faker->name(),
-        'phone_number' => $faker->phoneNumber(),
-        'address'=>$faker->address(),
+       
     ];
 });

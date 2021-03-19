@@ -26,9 +26,7 @@
                 <td>{{ $value->status }}</td>
                 <td>{{ $value->vehicle }}</td>
                 <td>{{ $value->body_plate }}</td>
-                <td>{{ $value->name }}</td>
-                <td>{{ $value->address }}</td>
-                <td>{{ $value->phone_number }}</td>
+                
                 <td>
                 <button data-toggle="modal" data-target="#updateModal" wire:click="edit({{ $value->id }})" class="btn btn-primary btn-sm">Edit</button>
                 <button wire:click="delete({{ $value->id }})" class="btn btn-danger btn-sm">Delete</button>

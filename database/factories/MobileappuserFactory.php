@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Generator as Faker;
-use App\Appuser;
+use App\Mobileappuser;
 /*
 |--------------------------------------------------------------------------
 | Model Factories
@@ -13,7 +13,7 @@ use App\Appuser;
 |
 */
 
-$factory->define(App\Appuser::class, function (Faker $faker) {
+$factory->define(App\Mobileappuser::class, function (Faker $faker) {
     return [
         'username'=>$faker->word(),
         'name' => $faker->name(),

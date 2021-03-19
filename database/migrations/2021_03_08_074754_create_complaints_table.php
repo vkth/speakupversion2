@@ -22,7 +22,7 @@ class CreateComplaintsTable extends Migration
             $table->string('narrative');
             $table->enum("vehicle",["jeep", "tricycle", "taxicle", "taxi"]);
             $table->string('file');
-            $table->string('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->enum('status',["pending", "solved"] );
             $table->timestamps();
            
