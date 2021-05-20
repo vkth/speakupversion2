@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-xampp public/
+web: vendor/bin/heroku-php-apache
