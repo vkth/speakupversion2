@@ -277,11 +277,9 @@
                                                                 <td>{{ $appusers->username }}</td> 
                                                                 <td>{{ $appusers->address }}</td>
                                                                 <td>{{ $appusers->email }}</td> 
-                                                                <td>{{ $appusers->status }}</td>
+                                                                <td><span class="label label-success label-rounded">{{ $appusers->status }}</td>
                                                             </tr>
-                                                            <td>
-                                                                      <button class="btn btn-success edit-status-btn" status={{ $appusers->status }} > EDIT </button>  
-                                                            </td>
+                                                            
                                                         @endforeach
                                                            
                                                 </table>
@@ -331,7 +329,7 @@
     <script src="../../dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="../../dist/js/custom.min.js"></script>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script>

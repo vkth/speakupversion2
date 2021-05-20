@@ -306,7 +306,7 @@
                                                                 <td>{{ $complaint->time }}</td>
                                                                 <td>{{ $complaint->narrative }}</td>
                                                                 <td>{{ $complaint->file }}</td>
-                                                                <td>{{ $complaint->status }}</td>
+                                                                <td><span class="label label-success label-rounded">{{ $complaint->status }}</td>
                                                             </tr>
                                                         @endforeach
                                                 </table>

@@ -204,7 +204,7 @@
                         </li>
                         
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="mobileappusers" aria-expanded="false">
                                 <i class="mdi mdi-cellphone"></i>
                                 <span class="hide-menu">Mobile App Users</span>
                             </a>
@@ -286,15 +286,26 @@
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label>Type of Vehicle:</label>
-                                                        <input type="text" name="vehicle" class="form-control" placeholder="Enter Vehicle">
+                                                        <label for="vehicles">Type of Vehicle:</label>
+                                                        <select class="form-control" name="vehicle">
+                                                            <option>Select Vehicle</option>
+                                                            <option>Jeep</option>
+                                                            <option>Taxi</option>
+                                                            <option>Taxicle</option>
+                                                            <option>Tricycle</option>
+                                                        </select>    
                                                     </div>
                                                     
-                                                     <div class="form-group">
-                                                        <label>Status:</label>
-                                                        <input type="text" name="status" class="form-control" placeholder="Enter Status">
+                                                    <div class="form-group">
+                                                        <label for="status">Status:</label>
+                                                            <select class="form-control" name="status">
+                                                            <option>Select Status</option>
+                                                            <option>Certified</option>
+                                                            <option>Not Certified</option>
+                                                        
+                                                        </select>
                                                     </div>
-                                                    
+
                                                     
                                                         <input type="hidden" name="operator_id" id="operator_id" value="1"  >
                                                     
@@ -359,14 +370,26 @@
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label>Type of Vehicle:</label>
-                                                        <input type="text" name="vehicle" class="form-control" placeholder="Enter Vehicle">
+                                                        <label for="vehicles">Type of Vehicle:</label>
+                                                        <select class="form-control" name="vehicle">
+                                                            <option>Select Vehicle</option>
+                                                            <option>Jeep</option>
+                                                            <option>Taxi</option>
+                                                            <option>Taxicle</option>
+                                                            <option>Tricycle</option>
+                                                        </select>    
                                                     </div>
                                                     
-                                                     <div class="form-group">
-                                                        <label>Status:</label>
-                                                        <input type="text" name="status" class="form-control" placeholder="Enter Status">
+                                                    <div class="form-group">
+                                                        <label for="status">Status:</label>
+                                                            <select class="form-control" name="status">
+                                                            <option>Select Status</option>
+                                                            <option>Certified</option>
+                                                            <option>Not Certified</option>
+                                                        
+                                                        </select>
                                                     </div>
+
                                                     
                                                     
                                                 </div>
@@ -461,8 +484,7 @@
                         Add Vehicle
                         </button>
                         
-                     
-
+                       
                         <br></br>
 
             <!--$$\    $$\ $$$$$$$$\ $$\   $$\ $$$$$$\  $$$$$$\  $$\       $$$$$$$$\ 
@@ -515,11 +537,12 @@
                                                                 <td>{{ $vehicle->operator->phone_number }}</td>
                                                                 <td>{{ $vehicle->operator->address }}</td>
                                                                 <td>
-                                                                      <button class="btn btn-success edit-vehicle-btn" vehicle_id={{ $vehicle->id }} > EDIT </button>  
+                                                                      <button class="btn btn-success edit-vehicle-btn" span class="glyphicon glyphicon-pencil" vehicle_id={{ $vehicle->id }} > EDIT </button>  
                                                                       <button class="btn btn-danger delete-vehicle-btn" vehicle_id={{ $vehicle->id }} > DELETE </button>
                                                                 </td>
                                                             </tr>
                                                         @endforeach
+                                                        
                                                     
                                                 </table>
                                             </div>
