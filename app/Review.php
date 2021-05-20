@@ -7,5 +7,7 @@ use Carbon\Carbon;
 
 class Review extends Model
 {
-    //
+    public function dashboard(){
+        return $this->belongs('App\Dashboard');
+    }
 }

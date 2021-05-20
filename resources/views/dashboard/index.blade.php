@@ -329,7 +329,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            
+                                           
                                             <td class="txt-oflo">Elite admin</td>
                                             <td><span class="label label-success label-rounded">SALE</span> </td>
                                             <td class="txt-oflo">April 18, 2017</td>

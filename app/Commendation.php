@@ -32,4 +32,8 @@ class Commendation extends Model
        {
            return 'date';
        }
+
+    public function dashboard(){
+        return $this->belongs('App\Dashboard');
+    }
 }

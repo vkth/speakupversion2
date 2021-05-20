@@ -22,7 +22,9 @@ class Complaint extends Model
         return (new Carbon($this->date_of_incident))->format('H:i A');
     }
 
-    
+    public function dashboard(){
+        return $this->belongs('App\Dashboard');
+    }
 
     //
 }

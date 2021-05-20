@@ -204,7 +204,7 @@
                         </li>
                         
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="mobileappusers" aria-expanded="false">
                                 <i class="mdi mdi-cellphone"></i>
                                 <span class="hide-menu">Mobile App Users</span>
                             </a>
@@ -226,7 +226,7 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item">
-                                        <a href="index">Home</a>
+                                        <a href="/">Home</a>
                                     </li>
                                     <li class="breadcrumb-item active" aria-current="page">Operator</li>
                                 </ol>
@@ -238,8 +238,7 @@
          
           <br><!--SPACE--></br> 
 
-<!--*****************************************************************************************************************************************************-->
-<!--*****************************************************************************************************************************************************-->            
+           
 <!-- 
 
         $$$$$$\  $$$$$$$\  $$$$$$$\                               
@@ -310,53 +309,8 @@
 
     <div class="container">
         
-            @if(count($errors) > 0)
-
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-            @endif
-
-            @if(\Session::has('success'))
-                <div class="alert alert-success">
-                    <p>{{ \Session::get('success') }}</p>
-                </div>
-            @endif
-            
-            
-            <!-- /***************************************************
-                           
-                $$$$$$$\ $$$$$$$$\ $$\   $$\                         
-                $$  __$$\\__$$  __|$$$\  $$ |                        
-                $$ |  $$ |  $$ |   $$$$\ $$ |                        
-                $$$$$$$\ |  $$ |   $$ $$\$$ |                        
-                $$  __$$\   $$ |   $$ \$$$$ |                        
-                $$ |  $$ |  $$ |   $$ |\$$$ |                        
-                $$$$$$$  |  $$ |   $$ | \$$ |                        
-                \_______/   \__|   \__|  \__|                        
-                                                                    
-                $$\      $$\  $$$$$$\  $$$$$$$\   $$$$$$\  $$\       
-                $$$\    $$$ |$$  __$$\ $$  __$$\ $$  __$$\ $$ |      
-                $$$$\  $$$$ |$$ /  $$ |$$ |  $$ |$$ /  $$ |$$ |      
-                $$\$$\$$ $$ |$$ |  $$ |$$ |  $$ |$$$$$$$$ |$$ |      
-                $$ \$$$  $$ |$$ |  $$ |$$ |  $$ |$$  __$$ |$$ |      
-                $$ |\$  /$$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |      
-                $$ | \_/ $$ | $$$$$$  |$$$$$$$  |$$ |  $$ |$$$$$$$$\ 
-                \__|     \__| \______/ \_______/ \__|  \__|\________|
-                                                     
-               *****************************************************/ -->                                          
-
-
-                <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Add Operator
-            </button>
-            <a href="/operators-edit" class="btn btn-danger"> Edit/Delete </a>
-            <br></br>
+     
+    
 
             <!--
                 $$$$$$$\   $$$$$$\ $$$$$$$$\  $$$$$$\             
@@ -385,16 +339,16 @@
                                                     <th scope="col">Operators ID NO:</th>
                                                     <th scope="col">Name</th>
                                                     <th scope="col">Phone Number</th>
-                                                    <th scope="col">Adress</th>
+                                                    <th scope="col">Address</th>
                                                     
                                                 </tr> 
                                             </thead>
                                             <tfoot>
                                                 <tr>
-                                                     <th scope="col">Operators ID NO:</th>
+                                                    <th scope="col">Operators ID NO:</th>
                                                     <th scope="col">Name</th>
                                                     <th scope="col">Phone Number</th>
-                                                    <th scope="col">Adress</th>
+                                                    <th scope="col">Address</th>
                                                     
                                                 </tr> 
                                             </tfoot>
@@ -424,12 +378,12 @@
                  $$ |      $$ |  $$ |$$ |  $$ |  $$ |   $$ |      $$ |  $$ |
                  $$ |       $$$$$$  | $$$$$$  |  $$ |   $$$$$$$$\ $$ |  $$ |
                  \__|       \______/  \______/   \__|   \________|\__|  \__|->
-            <!-- ============================================================== -->
+            
             <footer class="footer text-center">
                  2021. All Rights Reserved By Ateneo de Naga Univertsity. 
                 Designed and Developed by Delas Alas, Ferrer, and San Joaquin
             </footer>
-            <!-- ============================================================== -->
+             ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
         </div>

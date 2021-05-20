@@ -9,6 +9,6 @@ class MobileappuserController extends Controller
 {
     public function index() {
         $mobileappusers=(Mobileappuser::latest()->paginate(10) );
-        return view('mobileappuser.datatable', compact('mobileappusers'));
+        return view('mobileappusers.datatable', compact('mobileappusers'));
     }
 }

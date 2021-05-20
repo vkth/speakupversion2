@@ -461,7 +461,7 @@
                         Add Vehicle
                         </button>
                         
-                        <a href="/vehicles-edit" class="btn btn-danger"> Edit/Delete Vehicle </a>
+                     
 
                         <br></br>
 
@@ -512,7 +512,7 @@
                                                                 <td>{{ $vehicle->vehicle }}</td>
                                                                 <td>{{ $vehicle->body_plate }}</td>
                                                                 <td>{{ $vehicle->operator->name }}</td>
-                                                                <td>{{ $vehicle->operator->contact }}</td>
+                                                                <td>{{ $vehicle->operator->phone_number }}</td>
                                                                 <td>{{ $vehicle->operator->address }}</td>
                                                                 <td>
                                                                       <button class="btn btn-success edit-vehicle-btn" vehicle_id={{ $vehicle->id }} > EDIT </button>  
