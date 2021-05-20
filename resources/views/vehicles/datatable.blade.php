@@ -511,9 +511,9 @@
                                                                 <td>{{ $vehicle->status }}</td>
                                                                 <td>{{ $vehicle->vehicle }}</td>
                                                                 <td>{{ $vehicle->body_plate }}</td>
-                                                                <td>{{ $vehicle->name }}</td>
-                                                                <td>{{ $vehicle->phone_number }}</td>
-                                                                <td>{{ $vehicle->address }}</td>
+                                                                <td>{{ $vehicle->operator->name }}</td>
+                                                                <td>{{ $vehicle->operator->contact }}</td>
+                                                                <td>{{ $vehicle->operator->address }}</td>
                                                                 <td>
                                                                       <button class="btn btn-success edit-vehicle-btn" vehicle_id={{ $vehicle->id }} > EDIT </button>  
                                                                       <button class="btn btn-danger delete-vehicle-btn" vehicle_id={{ $vehicle->id }} > DELETE </button>
