@@ -17,7 +17,7 @@ class CreateReviewsTable extends Migration
         {
             $table->bigIncrements('id');
             $table->string('narrative');
-            $table->string('ratings');
+            $table->unsignedBigInteger('ratings');
             $table->string('flags');
             $table->timestamps();
             $table->unsignedBigInteger('user_id');
