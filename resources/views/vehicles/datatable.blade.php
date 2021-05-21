@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -107,7 +108,7 @@
                    
                     <ul class="navbar-nav float-right">
 
-                        <!-- ===========================Logout =================================== -->
+                       
                         <!-- 
                         $$\       $$$$$$\   $$$$$$\   $$$$$$\  $$\   $$\ $$$$$$$$\ 
                         $$ |     $$  __$$\ $$  __$$\ $$  __$$\ $$ |  $$ |\__$$  __|
@@ -117,8 +118,7 @@
                         $$ |     $$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |   $$ |   
                         $$$$$$$$\ $$$$$$  |\$$$$$$  | $$$$$$  |\$$$$$$  |   $$ |   
                         \________|\______/  \______/  \______/  \______/    \__| -->
-                        <!-- =============================Logout ================================= -->
-  
+                        
                         <li class="nav-item d-none d-md-block ">
                             <a href="{{ url('/logout') }}" class="nav-link "
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> 
@@ -136,11 +136,10 @@
         </header>
 </body>
         
-<!--*****************************************************************************************************************************************************-->
 
         <!--   
-              $$$$$$\  $$$$$$\ $$$$$$$\  $$$$$$$$\ $$$$$$$\   $$$$$$\  $$$$$$$\  
-             $$  __$$\ \_$$  _|$$  __$$\ $$  _____|$$  __$$\ $$  __$$\ $$  __$$\ 
+             $$$$$$\  $$$$$$\ $$$$$$$\  $$$$$$$$\ $$$$$$$\   $$$$$$\  $$$$$$$\  
+            $$  __$$\ \_$$  _|$$  __$$\ $$  _____|$$  __$$\ $$  __$$\ $$  __$$\ 
             $$ /  \__|  $$ |  $$ |  $$ |$$ |      $$ |  $$ |$$ /  $$ |$$ |  $$ |
             \$$$$$$\    $$ |  $$ |  $$ |$$$$$\    $$$$$$$\ |$$$$$$$$ |$$$$$$$  |
              \____$$\   $$ |  $$ |  $$ |$$  __|   $$  __$$\ $$  __$$ |$$  __$$< 
@@ -148,7 +147,7 @@
             \$$$$$$  |$$$$$$\ $$$$$$$  |$$$$$$$$\ $$$$$$$  |$$ |  $$ |$$ |  $$ |
              \______/ \______|\_______/ \________|\_______/ \__|  \__|\__|  \__|-->
 
-<!--*****************************************************************************************************************************************************-->
+
         <aside class="left-sidebar" data-sidebarbg="skin5">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
@@ -238,8 +237,6 @@
                 </div>
             </div>
             
-<!--*****************************************************************************************************************************************************-->
-<!--*****************************************************************************************************************************************************-->            
 <!-- 
 
         $$$$$$\  $$$$$$$\  $$$$$$$\                               
@@ -260,7 +257,7 @@
       $$ | \_/ $$ | $$$$$$  |$$$$$$$  |$$ |  $$ |$$$$$$$$\ 
       \__|     \__| \______/ \_______/ \__|  \__|\________|
                                                            
-**************************************************************************************************************/ -->             
+-->             
 <!-- Start Add Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
@@ -278,7 +275,6 @@
                                     {{ csrf_field() }}                            
                                     
                                                 <div class="modal-body">
-
                                                     
                                                     <div class="form-group">
                                                         <label>Body Plate:</label>
@@ -305,12 +301,9 @@
                                                         
                                                         </select>
                                                     </div>
-
                                                     
                                                         <input type="hidden" name="operator_id" id="operator_id" value="1"  >
-                                                    
 
-                                            
                                                 </div>
                                     
                                                 <div class="modal-footer">
@@ -458,8 +451,7 @@
 
         <!--End Confirm Delete Modal-->
 
-<!--******************************************************************************************************************************************************-->
-            
+          
             <div class="container-fluid">
                 
                             @if(count($errors) > 0)
@@ -537,8 +529,8 @@
                                                                 <td>{{ $vehicle->operator->phone_number }}</td>
                                                                 <td>{{ $vehicle->operator->address }}</td>
                                                                 <td>
-                                                                      <button class="btn btn-success edit-vehicle-btn" span class="glyphicon glyphicon-pencil" vehicle_id={{ $vehicle->id }} > EDIT </button>  
-                                                                      <button class="btn btn-danger delete-vehicle-btn" vehicle_id={{ $vehicle->id }} > DELETE </button>
+                                                                      <button class="btn btn-info edit-vehicle-btn"  vehicle_id={{ $vehicle->id }}><i class="fa fa-pencil"></i></button>  
+                                                                      <button class="btn btn-danger delete-vehicle-btn" vehicle_id={{ $vehicle->id }}><i class="fa fa-danger"></i> DELETE </button>
                                                                 </td>
                                                             </tr>
                                                         @endforeach
@@ -555,7 +547,7 @@
             </div>
             
 
-            <!-- footer ************************************************************
+            <!-- 
 
             $$$$$$$$\                   $$\                         
             $$  _____|                  $$ |                        
@@ -566,7 +558,7 @@
             $$ |   \$$$$$$  |\$$$$$$  | \$$$$  |\$$$$$$$\ $$ |      
             \__|    \______/  \______/   \____/  \_______|\__|    
 
-            ***********************************************************************-->
+            -->
 
 
             <footer class="footer text-center">
