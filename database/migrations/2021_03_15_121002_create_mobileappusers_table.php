@@ -21,7 +21,7 @@ class CreateMobileappusersTable extends Migration
             $table->string('phone_number');
             $table->string('address');
             $table->string('password');
-            $table->enum('status',["Verified", "Not verified"] );
+            $table->string('status');
             $table->unsignedBigInteger('admin_id');
             $table->timestamps();
         });
