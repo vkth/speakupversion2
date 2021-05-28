@@ -39,43 +39,4 @@ if ($_SERVER['REQUEST_METHOD'] =='POST'){
         mysqli_close($conn);
     }
 }
-
-////Don't run code until POST request is received
-//if($_SERVER['REQUEST_METHOD']=='POST'){
-//    include_once("dbConfig.php");
-//
-//    //Extract content of POST request into variables $mi_id, $name
-//    $mi_id = isset($_POST['mi_id']) ? $_POST['mi_id'] : null;
-//    $name = isset($_POST['name']) ? $_POST['name'] : null;
-//
-//    //Don't run next code if any of these variables
-//    //is empty null or false; return message
-//    if( empty( $mi_id ) || empty( $name ) ){
-//        echo json_encode(array( "status" => "false","message" => "Parameter missing!") );
-//    }
-//
-//    //If all you made it here, let's run the query;
-//    $query= "SELECT * FROM registerdemo WHERE mi_id='$mi_id' AND name='$name'";
-//
-//    //Only if there's result and greater than 0, then return something
-//    if( $result= mysqli_query($con, $query)) {
-//
-//        if(mysqli_num_rows($result) > 0){
-//            $emparray = array();
-//            while ($row = mysqli_fetch_assoc($result)!=NULL) {
-//                $emparray[] = $row;
-//            }
-//
-//            echo json_encode(array( "status" => "true","message" => "Login successfully!", "data" => $emparray) );
-//        }
-//        else{
-//            echo json_encode(array( "status" => "false","message" => "Invalid username or password!") );
-//        }
-//    }
-//    else {
-//        echo json_encode(array( "status" => "false","message" => "Error occured, please try again!") );
-//    }
-//    // Close mysql connection;
-//    mysqli_close($con);
-//}
 ?>
