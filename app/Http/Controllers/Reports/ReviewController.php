@@ -10,7 +10,7 @@ class ReviewController extends Controller
 {
     public function index() {
         $reviews=(Review::latest()->paginate(10) );
-        return view('reports.reviews.datatable', compact('reviews'));
+        return view('dashboard.reports.reviews.datatable', compact('reviews'));
     }
 
 

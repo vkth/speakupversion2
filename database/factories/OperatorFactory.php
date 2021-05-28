@@ -7,9 +7,10 @@ use Faker\Generator as Faker;
 
 $factory->define(Operator::class, function (Faker $faker) {
     return [
-        'name' => $faker->name(),
-        'phone_number' => $faker->phoneNumber,
-        'address'=>$faker->address,
+        'operator_id'   =>$faker->numberBetween(0001,9999),
+        'name'          =>$faker->name(),
+        'phone_number'  =>$faker->phoneNumber,
+        'address'       =>$faker->address,
         
     ];
 });

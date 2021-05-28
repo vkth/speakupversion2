@@ -18,10 +18,10 @@ class CreateReviewsTable extends Migration
             $table->bigIncrements('id');
             $table->string('narrative');
             $table->unsignedBigInteger('ratings');
-            $table->string('flags');
+            $table->enum("vehicle",["jeep", "tricycle", "taxicle", "taxi"]);
             $table->timestamps();
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('body_plate');
+            $table->string('body_plate');
            
         });
     }

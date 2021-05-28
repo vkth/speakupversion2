@@ -20,8 +20,9 @@ class CreateCommendationsTable extends Migration
             $table->time('time');
             $table->text('narrative');
             $table->string('file');
+            $table->enum("vehicle",["jeep", "tricycle", "taxicle", "taxi"]);
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('body_plate');
+            $table->string('body_plate');
             $table->timestamps();
             
         });

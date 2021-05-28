@@ -7,7 +7,7 @@ use Carbon\Carbon;
 
 class Operator extends Model
 {
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'address', 'phone_number', 'operator_id'];
 
     public function vehicles(){
          

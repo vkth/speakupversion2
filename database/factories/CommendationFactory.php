@@ -14,6 +14,7 @@ $factory->define(Commendation::class, function (Faker $faker) {
         'time'=>$faker->time(),
         'narrative'=>$faker->text(),
         'file'=>$faker->fileExtension(),
+        'vehicle' =>$faker->numberBetween(1,4),
         
         
     ];

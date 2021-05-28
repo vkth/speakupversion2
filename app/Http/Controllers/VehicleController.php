@@ -11,7 +11,7 @@ class VehicleController extends Controller
 {
     public function index(){
         $vehicles = Vehicle::all();
-        return view ('vehicles.datatable', compact('vehicles'));
+        return view ('dashboard.vehicles.datatable', compact('vehicles'));
     }
 
 
@@ -23,14 +23,18 @@ class VehicleController extends Controller
     public function store(Request $request)
     {
         
-        $validated_vehicle = $this->validateVehicle();
 
+        $validated_vehicle     = $this->validateVehicle();
+        $validated_operator_name    = $this->validateOperatorName();
+                             
         // find the specific operator with the given id
         $operator = Operator::find($validated_vehicle['operator_id']);
-        
         $validated_vehicle['admin_id'] = Auth::user()->id;
-        // create vehicles using the operator
-        $vehicle = $operator->vehicles()->create($validated_vehicle);
+        $vehicles = $operator->vehicles()->create($validated_vehicle);
+        
+        //$vehicles = Operator::where('name', 'like', '%' . $validated_operator_name .'%' )->get()->first();
+       
+        //$vehicle->save();
 
         return redirect('/vehicles')->with('success', 'Vehicle Added!');
     }
@@ -38,8 +42,10 @@ class VehicleController extends Controller
     public function update(Vehicle $vehicle){
 
         $validated_vehicle = $this->validateVehicle(false);
-        
+        $validated_operator_name = $this->validateOperatorName(false);
+
         $vehicle->update($validated_vehicle);
+        $vehicle->update($validated_operator_name);
         
         return redirect('/vehicles')->with('success', 'Vehicle Updated!');
     }
@@ -54,6 +60,19 @@ class VehicleController extends Controller
             
             ]); // validate request
     }
+
+    protected function validateOperatorName($create=true){
+
+        return request()->validate([
+            'operator_name' => 'required',
+            
+            ]); // validate request
+    }
+
+    public function edit($id)
+	{
+		
+	}
 
     public function destroy(Vehicle $vehicle){
 

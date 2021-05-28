@@ -21,7 +21,7 @@ $factory->define(App\Mobileappuser::class, function (Faker $faker) {
         'phone_number' => $faker->phoneNumber,
         'address'=>$faker->address,
         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-        'status'=>$faker->word(),
+        'status'=>$faker->numberBetween(1,2),
         'admin_id' =>$faker->numberBetween(1,999),
     ];
 });

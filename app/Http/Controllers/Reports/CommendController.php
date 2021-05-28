@@ -10,7 +10,7 @@ class CommendController extends Controller
 {
     public function index() {
         $commendations=(Commendation::latest()->paginate(10) );
-        return view('reports.commends.datatable', compact('commendations'));
+        return view('dashboard.reports.commends.datatable', compact('commendations'));
     }
 
 

@@ -17,29 +17,33 @@ Auth::routes();
 
 Route::middleware('auth')->group(function () {
 
-    Route::get('/', 'DashboardController@index')->name('dashboard');
+
+    Route::get('/', 'DashboardController@index')->name('dashboard.index');
     
+    //Reports
     Route::get('/reports', 'ReportController@index')->name('reports');
-    Route::get('/commends', 'Reports\CommendController@index')->name('commends');
-    Route::get('/complaints', 'Reports\ComplaintController@index')->name('complaints');
-    Route::get('/reviews', 'Reports\ReviewController@index')->name('reviews');
-    Route::get('/operators', 'OperatorController@index')->name('operators');
-    Route::get('/vehicles', 'VehicleController@index')->name('vehicles');
+        Route::get('/commends', 'Reports\CommendController@index')->name('commends');
+        Route::get('/complaints', 'Reports\ComplaintController@index')->name('complaints');
+        Route::get('/reviews', 'Reports\ReviewController@index')->name('reviews');
+    
+    //App Users
     Route::get('/mobileappusers', 'MobileAppUserController@index')->name('mobileappusers');
    
+    //Operators
+    Route::get('/operators', 'OperatorController@index')->name('operators.index');
     Route::resource('/operators', 'OperatorController');  // update
-    Route::view('operators-edit','livewire.operator_home'); //edit
+    Route::get('delete/{id}','OperatorController@destroy'); // delete
 
+    //Vehicles
     Route::resource('/vehicles', 'VehicleController'); //update
-    Route::view('vehicles-edit','livewire.home'); // edit
+    Route::get('/vehicles', 'VehicleController@index')->name('vehicles');
+    Route::get('/vehicles/{id}/edit/','VehicleController@edit');
     Route::put('/vehicles/{vehicle?}','VehicleController@update')->name('vehicle.update'); //update
-
-    Route::get('/form-file', function () {
-    return view('formfile'); // upload file
-    });
+    
 
     Route::get('/home', 'HomeController@index')->name('home');
     
+  
 });
 
 

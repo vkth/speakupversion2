@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Operator;
+use App\Vehicle;
 
 class OperatorController extends Controller
 {
@@ -14,7 +15,7 @@ class OperatorController extends Controller
      */
     public function index() {
         $operators=(Operator::latest()->paginate(100) );
-        return view('operators.datatable', compact('operators'));
+        return view('dashboard.operators.datatable', compact('operators'));
     }
 
     /**
@@ -36,21 +37,24 @@ class OperatorController extends Controller
     public function store(Request $request)
     {
         $this ->validate($request,[
-            'name' => 'required',
-            'address' => 'required',
-            'phone_number' => 'required',
+            'operator_id'   => 'required',
+            'name'          => 'required',
+            'address'       => 'required',
+            'phone_number'  => 'required',
             
 
             ]);
 
-        $operators = new Operator;
-
-        $operators->name            = $request->input('name');
-        $operators->address         = $request->input('address');
-        $operators->phone_number    = $request->input('phone_number');
+        $operator = new Operator;
         
-        $operators->save();
-
+        $operator->operator_id     = $request->input('operator_id');
+        $operator->name            = $request->input('name');
+        $operator->address         = $request->input('address');
+        $operator->phone_number    = $request->input('phone_number');
+        
+       
+        $operator->save();
+        
         return redirect('/operators')->with('success', 'Data Saved!!!');
     }
 
@@ -95,8 +99,13 @@ class OperatorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
+    public function destroy(Operator $operator){
+
+        $vehicle->delete();
+
+        return redirect('/operators')->with('success', 'Operator Successfully Deleted!');
     }
+        
+
+    
 }

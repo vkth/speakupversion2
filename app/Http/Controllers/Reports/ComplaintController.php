@@ -10,7 +10,7 @@ class ComplaintController extends Controller
 {
     public function index() {
         $complaints=(Complaint::latest()->paginate(10) );
-        return view('reports.complaints.datatable', compact('complaints'));
+        return view('dashboard.reports.complaints.datatable', compact('complaints'));
     }
 
 

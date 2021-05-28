@@ -12,7 +12,7 @@ $factory->define(Review::class, function (Faker $faker)
         'body_plate'=>$faker->numberBetween(0001,9999),
         'ratings'=>$faker->numberBetween(0,5),
         'narrative'=>$faker->sentence(),
-        'flags'=>$faker->numberBetween(1,999),
+        'vehicle' =>$faker->numberBetween(1,4),
         'user_id' =>$faker->numberBetween(1,999),
        
     ];
