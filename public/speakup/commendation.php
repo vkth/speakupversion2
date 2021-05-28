@@ -1,6 +1,6 @@
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] =='POST'){
+// if ($_SERVER['REQUEST_METHOD'] =='POST'){
 
 	$user_id = $_POST['user_id'];
 	//$name = $_POST['name'];
@@ -33,6 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] =='POST'){
         echo json_encode($result);
         mysqli_close($conn);
     }
-}
+// }
 
 ?>
