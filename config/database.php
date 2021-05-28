@@ -48,7 +48,7 @@ return [
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', 'remotemysql.com'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'fKjE0CChQb'),
+            'database' => env('DB_DATABASE', 'fKjE0CChQb'), 
             'username' => env('DB_USERNAME', 'fKjE0CChQb'),
             'password' => env('DB_PASSWORD', 'fiDmb2Jzyd'),
             'unix_socket' => env('DB_SOCKET', ''),
