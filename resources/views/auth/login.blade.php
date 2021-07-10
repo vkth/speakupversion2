@@ -70,14 +70,11 @@
                 <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">
                     <div class="card-body text-center">
                         <div>
-                            <h2>SpeakUp</h2>
+                            <!--Logo-->
+                            <b class="logo-icon">
+                                <img src="../../assets/images/logo-big.png" alt="homepage" class="light-logo" />
+                            </b>
                             
-                            <p>SPEAKUP is a system designed to facilitate the commuters in sending their complaints and/or
-commendations towards a certain PUV to the Public Safety Office(PSO), the office in-charge for
-public safety and concern. It is a web and mobile application, the web application is developed for
-the admin’s use and the mobile application is developed to cater the commuter’s need.
-.</p>
-                                
                         </div>
                     </div>
                 </div>

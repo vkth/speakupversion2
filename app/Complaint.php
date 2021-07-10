@@ -7,6 +7,10 @@ use Carbon\Carbon;
 
 class Complaint extends Model
 {
+    protected $fillable = [
+        'status',
+    
+    ];
     public function user()
     {
         return $this->belongsTo(User::class);

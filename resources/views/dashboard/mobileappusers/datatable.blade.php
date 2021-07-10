@@ -1,7 +1,6 @@
 @extends ('layouts.dashboard.layout')
 @section('content')
-
-<div class="page-wrapper">
+        <div class="page-wrapper">
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-5 align-self-center">
@@ -12,7 +11,7 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item">
-                                        <a href="index">Home</a>
+                                        <a href="./">Home</a>
                                     </li>
                                     <li class="breadcrumb-item active" aria-current="page">Mobile-app-users</li>
                                 </ol>
@@ -21,31 +20,28 @@
                     </div>
                 </div>
             </div>
+            
             <div class="container-fluid">
+          
+           
 
 
-<!-- ===================================================================================================================== -->
-
-<!-- Start Page Content 
-
-        $$$$$$$\   $$$$$$\   $$$$$$\  $$$$$$$$\        $$$$$$\   $$$$$$\  $$\   $$\ $$$$$$$$\ $$$$$$$$\ $$\   $$\ $$$$$$$$\ 
-        $$  __$$\ $$  __$$\ $$  __$$\ $$  _____|      $$  __$$\ $$  __$$\ $$$\  $$ |\__$$  __|$$  _____|$$$\  $$ |\__$$  __|
-        $$ |  $$ |$$ /  $$ |$$ /  \__|$$ |            $$ /  \__|$$ /  $$ |$$$$\ $$ |   $$ |   $$ |      $$$$\ $$ |   $$ |   
-        $$$$$$$  |$$$$$$$$ |$$ |$$$$\ $$$$$\          $$ |      $$ |  $$ |$$ $$\$$ |   $$ |   $$$$$\    $$ $$\$$ |   $$ |   
-        $$  ____/ $$  __$$ |$$ |\_$$ |$$  __|         $$ |      $$ |  $$ |$$ \$$$$ |   $$ |   $$  __|   $$ \$$$$ |   $$ |   
-        $$ |      $$ |  $$ |$$ |  $$ |$$ |            $$ |  $$\ $$ |  $$ |$$ |\$$$ |   $$ |   $$ |      $$ |\$$$ |   $$ |   
-        $$ |      $$ |  $$ |\$$$$$$  |$$$$$$$$\       \$$$$$$  | $$$$$$  |$$ | \$$ |   $$ |   $$$$$$$$\ $$ | \$$ |   $$ |   
-        \__|      \__|  \__| \______/ \________|       \______/  \______/ \__|  \__|   \__|   \________|\__|  \__|   \__|   
-
-
-=========================================================================================================================== -->
-               
+                <!-- Start Page Content 
+                    $$$$$$$\   $$$$$$\   $$$$$$\  $$$$$$$$\        $$$$$$\   $$$$$$\  $$\   $$\ $$$$$$$$\ $$$$$$$$\ $$\   $$\ $$$$$$$$\ 
+                    $$  __$$\ $$  __$$\ $$  __$$\ $$  _____|      $$  __$$\ $$  __$$\ $$$\  $$ |\__$$  __|$$  _____|$$$\  $$ |\__$$  __|
+                    $$ |  $$ |$$ /  $$ |$$ /  \__|$$ |            $$ /  \__|$$ /  $$ |$$$$\ $$ |   $$ |   $$ |      $$$$\ $$ |   $$ |   
+                    $$$$$$$  |$$$$$$$$ |$$ |$$$$\ $$$$$\          $$ |      $$ |  $$ |$$ $$\$$ |   $$ |   $$$$$\    $$ $$\$$ |   $$ |   
+                    $$  ____/ $$  __$$ |$$ |\_$$ |$$  __|         $$ |      $$ |  $$ |$$ \$$$$ |   $$ |   $$  __|   $$ \$$$$ |   $$ |   
+                    $$ |      $$ |  $$ |$$ |  $$ |$$ |            $$ |  $$\ $$ |  $$ |$$ |\$$$ |   $$ |   $$ |      $$ |\$$$ |   $$ |   
+                    $$ |      $$ |  $$ |\$$$$$$  |$$$$$$$$\       \$$$$$$  | $$$$$$  |$$ | \$$ |   $$ |   $$$$$$$$\ $$ | \$$ |   $$ |   
+                    \__|      \__|  \__| \______/ \________|       \______/  \______/ \__|  \__|   \__|   \________|\__|  \__|   \__|   
+                 -->
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                    <h6 class="card-subtitle"> Instructions: 
-                                    To print/save Mobile App Users click the button below and the file you prefer (CSV, Excel, PDF) . Search button on the right-side.</h6>
+                                    <h6 class="card-subtitle">Instructions: 
+                                    To print/save Mobile App Users Table click the button below and the file you prefer (CSV, Excel, PDF) . Search button on the right-side.</h6>
                                     <div class="table-responsive">
                                         <div class="panel panel-default">
                                     
@@ -57,53 +53,53 @@
                                                             <th>User ID</th>
                                                             <th>Name</th>
                                                             <th>Username</th>
-                                                            <th>Address</th>
                                                             <th>Email</th>
+                                                            <th>Address</th>
                                                             <th>Status</th>
                                                         </tr> 
                                                     </thead>
+                        
                                                         @foreach ($mobileappusers as $appusers)
                                                             <tr>
                                                                 <td>{{ $appusers->id}}</td>
                                                                 <td>{{ $appusers->name }}</td>
                                                                 <td>{{ $appusers->username }}</td> 
-                                                                <td>{{ $appusers->email }}</td> 
-                                                                <td>{{ $appusers->status }}</td>
+                                                                <td>{{ $appusers->email }}</td>
+                                                                <td>{{ $appusers->address }}</td> 
+                                                                <td>
+                                                                    @if($appusers->status =='Verified')
+                                                                    <span class="label label-success label-rounded">{{ $appusers->status }} </span>
+                                                                    @else
+                                                                    <span class="label label-danger label-rounded">not verified</span>
+                                                                    @endif
+                                                                   
+                                                                </td>
                                                             </tr>
                                                         @endforeach
-                                                    
                                                 </table>
                                             </div>
                                         </div>
                                     </div>
                             </div>
+                            
                         </div>
                     </div>
+                
+                    
                 </div>
+     
             </div>
 
-            <!-- footer 
-            $$$$$$$$\                   $$\                         
-            $$  _____|                  $$ |                        
-            $$ |    $$$$$$\   $$$$$$\ $$$$$$\    $$$$$$\   $$$$$$\  
-            $$$$$\ $$  __$$\ $$  __$$\\_$$  _|  $$  __$$\ $$  __$$\ 
-            $$  __|$$ /  $$ |$$ /  $$ | $$ |    $$$$$$$$ |$$ |  \__|
-            $$ |   $$ |  $$ |$$ |  $$ | $$ |$$\ $$   ____|$$ |      
-            $$ |   \$$$$$$  |\$$$$$$  | \$$$$  |\$$$$$$$\ $$ |      
-            \__|    \______/  \______/   \____/  \_______|\__|      
-            -->
-            <!-- ============================================================== -->
+            
             
             <footer class="footer text-center">
-                 2021. All Rights Reserved By Ateneo de Naga Univertsity. 
                 Designed and Developed by Delas Alas, Ferrer, and San Joaquin
             </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
+           
         </div>
+        
     </div>
-   
+    
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
@@ -117,6 +113,13 @@
     <script src="../../dist/js/waves.js"></script>
     <!--Menu sidebar -->
     <script src="../../dist/js/sidebarmenu.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
     <!--Custom JavaScript -->
     <script src="../../dist/js/custom.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -141,5 +144,5 @@
 
 </html>
 
-
 @endsection
+

@@ -42,10 +42,10 @@ class VehicleController extends Controller
     public function update(Vehicle $vehicle){
 
         $validated_vehicle = $this->validateVehicle(false);
-        $validated_operator_name = $this->validateOperatorName(false);
+        //$validated_operator_name = $this->validateOperatorName(false);
 
         $vehicle->update($validated_vehicle);
-        $vehicle->update($validated_operator_name);
+        //$vehicle->update($validated_operator_name);
         
         return redirect('/vehicles')->with('success', 'Vehicle Updated!');
     }

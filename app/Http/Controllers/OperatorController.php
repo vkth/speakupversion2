@@ -8,46 +8,36 @@ use App\Vehicle;
 
 class OperatorController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index() {
-        $operators=(Operator::latest()->paginate(100) );
+        $operators=Operator::all();
         return view('dashboard.operators.datatable', compact('operators'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
+    public function ajax()
+    {
+        return view('operator.ajax');
+    }
+
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
         $this ->validate($request,[
-            'operator_id'   => 'required',
+            
             'name'          => 'required',
             'address'       => 'required',
             'phone_number'  => 'required',
-            
 
             ]);
 
         $operator = new Operator;
         
-        $operator->operator_id     = $request->input('operator_id');
         $operator->name            = $request->input('name');
         $operator->address         = $request->input('address');
         $operator->phone_number    = $request->input('phone_number');
@@ -55,55 +45,41 @@ class OperatorController extends Controller
        
         $operator->save();
         
-        return redirect('/operators')->with('success', 'Data Saved!!!');
+        return redirect('/operators')->with('success', 'Success! Operator Added');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
+    public function update(Operator $operator){
+
+        $validated_operator = $this->validateOperator(false);
+       
+        $operator->update($validated_operator);
         
-
+        return redirect('/operators')->with('success', 'Operator Profile Updated!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    protected function validateOperator($create=true){
+
+        return request()->validate([
+            'name' => 'required',
+            'address' => 'required',
+            'phone_number' => 'required',
+            
+            ]); // validate request
+    }
+
+  
     public function destroy(Operator $operator){
 
-        $vehicle->delete();
+        $operator->delete();
 
-        return redirect('/operators')->with('success', 'Operator Successfully Deleted!');
+        return redirect('/operators')->with('warning', 'Operator Successfully Deleted!');
     }
         
 

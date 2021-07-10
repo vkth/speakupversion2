@@ -10,7 +10,7 @@ class Dashboard extends Model
         'status', 
         'body_plate', 
         'vehicle', 
-        'admin_id'
+        'admin_id',
         'date',
         'time',
         'narrative'

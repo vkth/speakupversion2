@@ -2029,7 +2029,7 @@ pre code {
 
 .table-dark {
   color: #fff;
-  background-color: #343a40;
+  background-color: #1b436b;
 }
 
 .table-dark th,
@@ -4437,7 +4437,7 @@ input[type=button].btn-block {
 }
 
 .nav-link.disabled {
-  color: #6c757d;
+  color: #0f5da1;
   pointer-events: none;
   cursor: default;
 }
@@ -4450,7 +4450,7 @@ input[type=button].btn-block {
   margin-bottom: -1px;
   border: 1px solid transparent;
   border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .nav-tabs .nav-link:hover,
@@ -4473,8 +4473,8 @@ input[type=button].btn-block {
 
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-top-left-radius: 0.5;
+  border-top-right-radius: 0.5;
 }
 
 .nav-pills .nav-link {
@@ -4509,10 +4509,10 @@ input[type=button].btn-block {
 }
 
 .navbar {
-  position: relative;
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: right;
   justify-content: space-between;
   padding: 0.5rem 1rem;
 }
@@ -4599,7 +4599,7 @@ input[type=button].btn-block {
 
 .navbar-nav-scroll {
   max-height: 75vh;
-  overflow-y: auto;
+  overflow-y: fixed;
 }
 
 @media (max-width: 575.98px) {

@@ -8,7 +8,11 @@ use App\Mobileappuser;
 class MobileappuserController extends Controller
 {
     public function index() {
-        $mobileappusers=(Mobileappuser::latest()->paginate(20) );
+        $mobileappusers=Mobileappuser::all();
         return view('dashboard.mobileappusers.datatable', compact('mobileappusers'));
     }
+
+
+        
+    
 }

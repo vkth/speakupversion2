@@ -7,9 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Mobileappuser extends Model
 {
     protected $fillable = [
-        'name',
-        'address',
-        'phone_number',
+        'id',
+        'status',
     
     ];
 

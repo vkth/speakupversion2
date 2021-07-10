@@ -9,7 +9,7 @@ use App\Commendation;
 class CommendController extends Controller
 {
     public function index() {
-        $commendations=(Commendation::latest()->paginate(10) );
+        $commendations=Commendation::all();
         return view('dashboard.reports.commends.datatable', compact('commendations'));
     }
 

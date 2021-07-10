@@ -1,133 +1,239 @@
 @extends ('layouts.dashboard.layout')
 @section('content')
 
-  <!--
-             $$$$$$$$\ $$$$$$\ $$$$$$$$\ $$\       $$$$$$$$\ 
-             \__$$  __|\_$$  _|\__$$  __|$$ |      $$  _____|
-                $$ |     $$ |     $$ |   $$ |      $$ |      
-                $$ |     $$ |     $$ |   $$ |      $$$$$\    
-                $$ |     $$ |     $$ |   $$ |      $$  __|   
-                $$ |     $$ |     $$ |   $$ |      $$ |      
-                $$ |   $$$$$$\    $$ |   $$$$$$$$\ $$$$$$$$\ 
-                \__|   \______|   \__|   \________|\________|
-                                                                
-                                                                
-                $$\   $$\ $$$$$$$$\  $$$$$$\  $$$$$$$\          
-                $$ |  $$ |$$  _____|$$  __$$\ $$  __$$\         
-                $$ |  $$ |$$ |      $$ /  $$ |$$ |  $$ |        
-                $$$$$$$$ |$$$$$\    $$$$$$$$ |$$ |  $$ |        
-                $$  __$$ |$$  __|   $$  __$$ |$$ |  $$ |        
-                $$ |  $$ |$$ |      $$ |  $$ |$$ |  $$ |        
-                $$ |  $$ |$$$$$$$$\ $$ |  $$ |$$$$$$$  |        
-                \__|  \__|\________|\__|  \__|\_______/         
-            --->                                   
-                                                
-            <div class="page-wrapper">
-            
-            <div class="page-breadcrumb">
+                               
+    <main class="app-content">
+      <div class="app-title">                                            
+      <div>
+          <h1>Dashboard</h1>
+          <p>Welcome to Dashboard Admin!</p>
+        </div>
+        
+        <ul class="app-breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+          <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+        </ul>
+      </div>
+      
+      
+        
+      </div>
+      <ul class="app-breadcrumb breadcrumb">
+      <!-- Content -->
+      <div class="content">
+            <!-- Animated -->
+            <div class="animated fadeIn">
+                <!-- Widgets  -->
                 <div class="row">
-                    <div class="col-5 align-self-center">
-                        <h2 class="page-title">Dashboard</h2>
-                        <h3 class="text-right mb-4 page-heading" id="clock">00:00:00 -- </h3> <!--clock-->
-                    </div>
-                    <div class="col-7 align-self-center">
-                        <div class="d-flex align-items-center justify-content-end">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">
-                                        <a href="index">Home</a>
-                                    </li>
-                                    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <!-- ============================================================== -->
-            <!-- title head  title head title head title head title head -->
-            <!-- ============================================================== -->
-           
-            <!--
-            $$$$$$$\                  $$\           
-            $$  __$$\                 $$ |          
-            $$ |  $$ | $$$$$$\   $$$$$$$ |$$\   $$\ 
-            $$$$$$$\ |$$  __$$\ $$  __$$ |$$ |  $$ |
-            $$  __$$\ $$ /  $$ |$$ /  $$ |$$ |  $$ |
-            $$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |
-            $$$$$$$  |\$$$$$$  |\$$$$$$$ |\$$$$$$$ |
-            \_______/  \______/  \_______| \____$$ |
-                                        $$\   $$ |
-                                        \$$$$$$  |
-                                        \______/ -->
-
-            <!-- ============================================================== -->
-            <!--Body Body Body Body Body Body Body Body Body Body Body Body Body-->
-            <!-- ============================================================== -->
-
-            <div class="container-fluid">
-                <div class="row">
-
-                    <!-- 
-                    $$\        $$$$$$\ $$$$$$$$\ $$$$$$$$\  $$$$$$\ $$$$$$$$\            
-                    $$ |      $$  __$$\\__$$  __|$$  _____|$$  __$$\\__$$  __|           
-                    $$ |      $$ /  $$ |  $$ |   $$ |      $$ /  \__|  $$ |              
-                    $$ |      $$$$$$$$ |  $$ |   $$$$$\    \$$$$$$\    $$ |              
-                    $$ |      $$  __$$ |  $$ |   $$  __|    \____$$\   $$ |              
-                    $$ |      $$ |  $$ |  $$ |   $$ |      $$\   $$ |  $$ |              
-                    $$$$$$$$\ $$ |  $$ |  $$ |   $$$$$$$$\ \$$$$$$  |  $$ |              
-                    \________|\__|  \__|  \__|   \________| \______/   \__|              
-
-                    
-                    $$$$$$$\  $$$$$$$$\ $$$$$$$\   $$$$$$\  $$$$$$$\ $$$$$$$$\  $$$$$$\  
-                    $$  __$$\ $$  _____|$$  __$$\ $$  __$$\ $$  __$$\\__$$  __|$$  __$$\ 
-                    $$ |  $$ |$$ |      $$ |  $$ |$$ /  $$ |$$ |  $$ |  $$ |   $$ /  \__|
-                    $$$$$$$  |$$$$$\    $$$$$$$  |$$ |  $$ |$$$$$$$  |  $$ |   \$$$$$$\  
-                    $$  __$$< $$  __|   $$  ____/ $$ |  $$ |$$  __$$<   $$ |    \____$$\ 
-                    $$ |  $$ |$$ |      $$ |      $$ |  $$ |$$ |  $$ |  $$ |   $$\   $$ |
-                    $$ |  $$ |$$$$$$$$\ $$ |       $$$$$$  |$$ |  $$ |  $$ |   \$$$$$$  |
-                    \__|  \__|\________|\__|       \______/ \__|  \__|  \__|    \______/ 
-                    -->
-                   
-                    <div class="col-12">
+                    <div class="col-lg-3 col-md-6">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Welcome Admin,</h4>
+                                <div class="stat-widget-five">
+                                    <div class="stat-icon dib flat-color-1">
+                                        <i class="pe-7s-folder"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="text-left dib">
+                                            <div class="stat-text"><span class="count">
+                                            <?php
+                                                $connection = mysqli_connect("localhost", "root", "", "speakupversion2" );
+
+                                                  $query = "SELECT id FROM complaints ORDER BY id" ;
+                                                  $query_run = mysqli_query($connection, $query);
+
+                                                  $row = mysqli_num_rows($query_run);
+
+                                                  echo '<h4>' .$row. '</h4>';
+                                              ?>
+                                            </span></div>
+                                            <div class="stat-heading">Complaints</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                             
-                                <!-- <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th class="border-top-0"></th>
-                                                
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                            
-                                                <td class="txt-oflo"></td>
-                                            
-                                            </tr>
-                                        
-                                        </tbody>
+                        </div>
+                    </div>
+                
 
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="stat-widget-five">
+                                    <div class="stat-icon dib flat-color-3">
+                                        <i class="pe-7s-browser"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="text-left dib">
+                                            <div class="stat-text"><span class="count">
+                                              <?php
+                                                $connection = mysqli_connect("localhost", "root", "", "speakupversion2" );
 
+                                                  $query = "SELECT id FROM reviews ORDER BY id" ;
+                                                  $query_run = mysqli_query($connection, $query);
 
-                                    </table>
-                                </div> -->
+                                                  $row = mysqli_num_rows($query_run);
+
+                                                  echo '<h4>' .$row. '</h4>';
+                                              ?></span></div>
+                                            <div class="stat-heading">Reviews</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="stat-widget-five">
+                                    <div class="stat-icon dib flat-color-4">
+                                        <i class="pe-7s-users"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="text-left dib">
+                                            <div class="stat-text"><span class="count">
+                                              <?php
+                                                $connection = mysqli_connect("localhost", "root", "", "speakupversion2" );
+
+                                                  $query = "SELECT id FROM mobileappusers ORDER BY id" ;
+                                                  $query_run = mysqli_query($connection, $query);
+
+                                                  $row = mysqli_num_rows($query_run);
+
+                                                  echo '<h4>' .$row. '</h4>';
+                                              ?>
+                                          </div></span></div>
+                                            <div class="stat-heading">Mobile App Users</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            </div>
 
-            <!--CLOCK SCRIPT-->
+                <!-- To Do and Live Chat -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <div class="todo-list">
+                                        <div class="tdl-holder">
+                                            <div class="tdl-content">
+                                                <ul>
+                                                <h3 class="title">Purpose and Description</h3>
+                                                  <p>This is a system designed to facilitate the commuters in sending their complaints</p> 
+                                                  <p>  and/or commendations towards a certain PUV to the Public Safety Office(PSO),</p> 
+                                                  <p>  the office in-charge for public safety and concern.</p>
+                                                  <p>It is a web and mobile application, the web application is developed for</p>
+                                                  <p> the admin’s use and the mobile application is developed to cater the commuter’s need.</p>
+
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <ul>
+                                        <h3 class="tile-title">Features</h3>
+                                       
+                                          <li>Built with Bootstrap 4, SASS and PUG.js</li>
+                                          <li>Fully responsive and modular code</li>
+                                          <li>Seven pages including admin login, view and print friendly report pages</li>
+                                          <li>Widgets to effectively display statistics</li>
+                                          <li>Data tables with sort, search and paginate functionality</li>
+                                          <li>Custom form elements like toggle buttons, auto-complete,and tags</li>
+                                          <li>A inbuilt toast library for providing meaningful response messages to user's actions</li>
+                                      
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <!-- /To Do and Live Chat -->
+
+            </div>
+            </div>    
+        </div>
+        <!-- /.content -->
+        </ul>
+    </main>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!--  Chart js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.bundle.min.js"></script>
+
+    <!--Chartist Chart-->
+    <script src="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartist-plugin-legend@0.6.2/chartist-plugin-legend.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery.flot@0.8.3/jquery.flot.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flot-pie@1.0.0/src/jquery.flot.pie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flot-spline@0.0.1/js/jquery.flot.spline.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/simpleweather@3.1.0/jquery.simpleWeather.min.js"></script>
+    <script src="assets/js/init/weather-init.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
+    <script src="assets/js/init/fullcalendar-init.js"></script>
+
+    <!--Local Stuff-->
+   
+
+    <!-- Essential javascripts for application to work-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="js/plugins/pace.min.js"></script>
+    <!-- Page specific javascripts-->
+    <script type="text/javascript" src="js/plugins/chart.js"></script>
+    
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="../../assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="../../dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="../../dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../../dist/js/custom.min.js"></script>
+    <!--This page JavaScript -->
+    <!--chartis chart-->
+    <script src="../../assets/libs/chartist/dist/chartist.min.js"></script>
+    <script src="../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="../../dist/js/pages/dashboards/dashboard1.js"></script>
+
+    
+    <!--CLOCK SCRIPT-->
             
-            <script type="text/javascript">
+    <script type="text/javascript">
                 setInterval(displayclock, 500);
 
                 function displayclock() {
@@ -158,71 +264,8 @@
                 }
                
             </script>
-
-            <!-- footer 
-            $$$$$$$$\                   $$\                         
-            $$  _____|                  $$ |                        
-            $$ |    $$$$$$\   $$$$$$\ $$$$$$\    $$$$$$\   $$$$$$\  
-            $$$$$\ $$  __$$\ $$  __$$\\_$$  _|  $$  __$$\ $$  __$$\ 
-            $$  __|$$ /  $$ |$$ /  $$ | $$ |    $$$$$$$$ |$$ |  \__|
-            $$ |   $$ |  $$ |$$ |  $$ | $$ |$$\ $$   ____|$$ |      
-            $$ |   \$$$$$$  |\$$$$$$  | \$$$$  |\$$$$$$$\ $$ |      
-            \__|    \______/  \______/   \____/  \_______|\__|      
-            -->
-            <!-- ============================================================== -->
-            <footer class="footer text-center">
-                2021. All Rights Reserved By Ateneo de Naga Univertsity. 
-                Designed and Developed by Delas Alas, Ferrer, and San Joaquin
-            </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
-        </div>
-        
-    </div>
-    
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
-    <!-- ============================================================== -->
-    <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="../../assets/extra-libs/sparkline/sparkline.js"></script>
-    <!--Wave Effects -->
-    <script src="../../dist/js/waves.js"></script>
-    <!--Menu sidebar -->
-    <script src="../../dist/js/sidebarmenu.js"></script>
-    <!--Custom JavaScript -->
-    <script src="../../dist/js/custom.min.js"></script>
-    <!--This page JavaScript -->
-    <!--chartis chart-->
-    <script src="../../assets/libs/chartist/dist/chartist.min.js"></script>
-    <script src="../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-    <script src="../../dist/js/pages/dashboards/dashboard1.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
-    
-    <script type="text/javascript"> 
-    $(document).ready(function () {
-        $('#datatable').DataTable({
-            dom: 'Bfrtip',
-            buttons: ['csv', 'excel', 'pdf', 'print']
-        });
-    });
-    </script>
 </body>
-<script src="{{ asset('js/app.js') }}"></script>
-@livewireScripts
-
 </html>
+
 
 @endsection

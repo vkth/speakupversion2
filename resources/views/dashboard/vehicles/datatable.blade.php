@@ -8,6 +8,7 @@
                     <div class="col-5 align-self-center">
                         <h4 class="page-title">Vehicles</h4>
                     </div>
+                    <br></br>
                     <div class="col-7 align-self-center">
                         <div class="d-flex align-items-center justify-content-end">
                             <nav aria-label="breadcrumb">
@@ -70,7 +71,7 @@
                                                     <div class="form-group">
                                                         <label for="vehicles">Type of Vehicle:</label>
                                                         <select class="form-control" name="vehicle">
-                                                            <option>Select Vehicle</option>
+                                                            <option disabled >Select Vehicle</option>
                                                             <option>Jeep</option>
                                                             <option>Taxi</option>
                                                             <option>Taxicle</option>
@@ -81,7 +82,7 @@
                                                     <div class="form-group">
                                                         <label for="status">Status:</label>
                                                             <select class="form-control" name="status">
-                                                            <option>Select Status</option>
+                                                            <option  disabled>Select Status</option>
                                                             <option>Certified</option>
                                                             <option>Colorum</option>
                                                         
@@ -114,6 +115,24 @@
                             </div>
                         </div>
                     </div>
+
+                    @if(count($errors) > 0)
+
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
+
+                    @if(\Session::has('success'))
+                        <div class="alert alert-success">
+                            <p>{{ \Session::get('success') }}</p>
+                        </div>
+                    @endif
+
         <!-- End Add Modal -->
         <!--
             $$$$$$$$\ $$$$$$$\  $$$$$$\ $$$$$$$$\                
@@ -163,7 +182,7 @@
                                                     <div class="form-group">
                                                         <label for="vehicles">Type of Vehicle:</label>
                                                         <select class="form-control" id='vehicle' name="vehicle">
-                                                            <option>Select Vehicle</option>
+                                                            <option disabled>Select Vehicle</option>
                                                             <option>Jeep</option>
                                                             <option>Taxi</option>
                                                             <option>Taxicle</option>
@@ -175,11 +194,16 @@
                                                     <div class="form-group">
                                                         <label for="status">Status:</label>
                                                             <select class="form-control" id='status' name="status">
-                                                            <option>Select Status</option>
+                                                            <option disabled>Select Status </option>
                                                             <option>Certified</option>
                                                             <option>Colorum</option>
                                                         
                                                         </select>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label>Operator id:</label>
+                                                        <input type="text" name="operator_id" class="form-control" placeholder="Enter Operator ID">
                                                     </div>
 
                                                     
@@ -223,12 +247,12 @@
                                 
                             
                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="confirmdeleteModalLabel">Are you sure you want to delete?</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                </div>
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="confirmdeleteModalLabel">Are you sure you want to delete?</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                </div>
 
 
                                                 <div class="modal-footer">
@@ -243,23 +267,14 @@
                                             
                                     
 
-                            </div>
+                                </div>
                         </div>
                     </div>
 
 
-        <!--End Confirm Delete Modal-->
-
-          
-            <div class="container-fluid">
-                
-                        
-                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                 Add Vehicle
-                </button>
-                        
-                       
-            <br></br>
+            <!--End Confirm Delete Modal-->
+        
+            
 
             <!--$$\    $$\ $$$$$$$$\ $$\   $$\ $$$$$$\  $$$$$$\  $$\       $$$$$$$$\ 
                 $$ |   $$ |$$  _____|$$ |  $$ |\_$$  _|$$  __$$\ $$ |      $$  _____|
@@ -278,12 +293,24 @@
                         $$ |   $$ |  $$ |$$ |  $$ |$$ |      $$ |                         
                         $$ |   $$ |  $$ |$$$$$$$  |$$$$$$$$\ $$$$$$$$\                    
                         \__|   \__|  \__|\_______/ \________|\________|  -->
+
+                <!-- Add Button for New Vehicles -->
+                <div class="container-fluid">
+                
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Add New Vehicle
+               </button>
+                       
+                <br></br>
                             
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                    <h6 class="card-subtitle">Registered vehicles .</h6>
+                                    <h6 class="card-subtitle"> Instructions: 
+                                    To print/save Operators Table click the button below and the file you prefer (CSV, Excel, PDF). 
+                                    Search button on the right-side.
+                                    </h6>
                                     <div class="table-responsive">
                                         <div class="panel panel-default">
                                     
@@ -292,27 +319,28 @@
                             
                                                     <thead>
                                                         <tr>
+                                                            
+                                                            <th>Type of Vehicle</th>
                                                             <th>Status</th>
-                                                            <th>Type_of_Vehicle</th>
                                                             <th>Body_Plate</th>
+                                                            <th>Operator ID</th>
                                                             <th>Operator Name</th>
-                                                            <th>Operator Contact</th>
-                                                            <th>Operator Address</th>
                                                             <th>Action</th>
                                                     
                                                         </tr> 
                                                     </thead>
                                                         @foreach ($vehicles as $vehicle)
                                                             <tr>
-                                                                <td>{{ $vehicle->status }}</td>
+                                                                
                                                                 <td>{{ $vehicle->vehicle }}</td>
+                                                                <td>{{ $vehicle->status }}</td>
                                                                 <td>{{ $vehicle->body_plate }}</td>
+                                                                <td>{{ $vehicle->operator->id }}</td>
                                                                 <td>{{ $vehicle->operator->name }}</td>
-                                                                <td>{{ $vehicle->operator->phone_number }}</td>
-                                                                <td>{{ $vehicle->operator->address }}</td>
+                                                                
                                                                 <td>
-                                                                      <button class="btn btn-info edit-vehicle-btn"  vehicle_id={{ $vehicle->id }}><i class="fa fa-pencil"></i>Edit</button>  
-                                                                      <button class="btn btn-danger delete-vehicle-btn" vehicle_id={{ $vehicle->id }}><i class="fa fa-trash"></i>Delete </button>
+                                                                      <button class="btn btn-info edit-vehicle-btn"  vehicle_id={{ $vehicle->id }}><i class="fa fa-edit"></i></button>  
+                                                                      <button class="btn btn-danger delete-vehicle-btn" vehicle_id={{ $vehicle->id }}><i class="fa fa-trash"></i></button>
                                                                 </td>
                                                             </tr>
                                                         @endforeach
@@ -363,6 +391,9 @@
     <script src="../../dist/js/waves.js"></script>
     <!--Menu sidebar -->
     <script src="../../dist/js/sidebarmenu.js"></script>
+
+    
+
     <!--Custom JavaScript -->
     <script src="../../dist/js/custom.min.js"></script>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>-->
@@ -382,7 +413,6 @@
             buttons: ['csv', 'excel', 'pdf', 'print']
         });
 
-        
         $('body').on('click', '.edit-vehicle-btn', function () {
             var vehicle_id=$(this).attr('vehicle_id');
             $('#editform').attr('action', '/vehicles/'+vehicle_id);

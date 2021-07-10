@@ -9,7 +9,7 @@ use App\Review;
 class ReviewController extends Controller
 {
     public function index() {
-        $reviews=(Review::latest()->paginate(10) );
+        $reviews=Review::all();
         return view('dashboard.reports.reviews.datatable', compact('reviews'));
     }
 
@@ -54,7 +54,7 @@ class ReviewController extends Controller
      */
     public function edit($id)
     {
-        //
+       
     }
 
     /**
