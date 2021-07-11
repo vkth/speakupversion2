@@ -12,7 +12,6 @@ class MobileappuserController extends Controller
         return view('dashboard.mobileappusers.datatable', compact('mobileappusers'));
     }
 
-
         
     
 }
