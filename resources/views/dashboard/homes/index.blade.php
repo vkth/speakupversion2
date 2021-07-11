@@ -37,7 +37,7 @@
                                             
                                             <div class="stat-text">Total: <span class="count">
                                             <?php
-                                                $connection = mysqli_connect("localhost", "root", "", "speakupversion2" );
+                                                $connection = mysqli_connect("remotemysql.com", "fKjE0CChQb", "fiDmb2Jzyd", "fKjE0CChQb");
 
                                                   $query = "SELECT id FROM complaints ORDER BY id" ;
                                                   $query_run = mysqli_query($connection, $query);
@@ -67,7 +67,7 @@
                                         <div class="text-left dib">
                                             <div class="stat-text">Total: <span class="count">
                                               <?php
-                                                $connection = mysqli_connect("localhost", "root", "", "speakupversion2" );
+                                                $connection = mysqli_connect("remotemysql.com", "fKjE0CChQb", "fiDmb2Jzyd", "fKjE0CChQb");
 
                                                   $query = "SELECT id FROM reviews ORDER BY id" ;
                                                   $query_run = mysqli_query($connection, $query);
@@ -95,7 +95,7 @@
                                         <div class="text-left dib">
                                             <div class="stat-text">Total: <span class="count">
                                               <?php
-                                                $connection = mysqli_connect("localhost", "root", "", "speakupversion2" );
+                                                $connection = mysqli_connect("remotemysql.com", "fKjE0CChQb", "fiDmb2Jzyd", "fKjE0CChQb");
 
                                                   $query = "SELECT id FROM mobileappusers ORDER BY id" ;
                                                   $query_run = mysqli_query($connection, $query);
