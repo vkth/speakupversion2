@@ -13,10 +13,8 @@
                         <div class="d-flex align-items-center justify-content-end">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">
-                                        <a href="index">Home</a>
-                                    </li>
-                                    <li class="breadcrumb-item active" aria-current="page">Vehicles</li>
+                                <li class="breadcrumb-item"><a href="/"><i class="fa fa-angle-double-left fa-lg"></i>  Back to Dashboard</a></li>
+                            <li class="breadcrumb-item">Vehicles</li>
                                 </ol>
                             </nav>
                         </div>
@@ -357,24 +355,7 @@
             </div>
             
 
-            <!-- 
-
-            $$$$$$$$\                   $$\                         
-            $$  _____|                  $$ |                        
-            $$ |    $$$$$$\   $$$$$$\ $$$$$$\    $$$$$$\   $$$$$$\  
-            $$$$$\ $$  __$$\ $$  __$$\\_$$  _|  $$  __$$\ $$  __$$\ 
-            $$  __|$$ /  $$ |$$ /  $$ | $$ |    $$$$$$$$ |$$ |  \__|
-            $$ |   $$ |  $$ |$$ |  $$ | $$ |$$\ $$   ____|$$ |      
-            $$ |   \$$$$$$  |\$$$$$$  | \$$$$  |\$$$$$$$\ $$ |      
-            \__|    \______/  \______/   \____/  \_______|\__|    
-
-            -->
-
-
-            <footer class="footer text-center">
-                 2021. All Rights Reserved By Ateneo de Naga Univertsity. 
-                Designed and Developed by Delas Alas, Ferrer, and San Joaquin
-            </footer>
+            
         </div>
     </div>
     

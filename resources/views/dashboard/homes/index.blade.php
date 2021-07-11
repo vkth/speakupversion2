@@ -34,7 +34,8 @@
                                     </div>
                                     <div class="stat-content">
                                         <div class="text-left dib">
-                                            <div class="stat-text"><span class="count">
+                                            
+                                            <div class="stat-text">Total: <span class="count">
                                             <?php
                                                 $connection = mysqli_connect("localhost", "root", "", "speakupversion2" );
 
@@ -64,7 +65,7 @@
                                     </div>
                                     <div class="stat-content">
                                         <div class="text-left dib">
-                                            <div class="stat-text"><span class="count">
+                                            <div class="stat-text">Total: <span class="count">
                                               <?php
                                                 $connection = mysqli_connect("localhost", "root", "", "speakupversion2" );
 
@@ -92,7 +93,7 @@
                                     </div>
                                     <div class="stat-content">
                                         <div class="text-left dib">
-                                            <div class="stat-text"><span class="count">
+                                            <div class="stat-text">Total: <span class="count">
                                               <?php
                                                 $connection = mysqli_connect("localhost", "root", "", "speakupversion2" );
 

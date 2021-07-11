@@ -12,7 +12,7 @@
                         <div class="d-flex align-items-center justify-content-end">
                             <nav aria-label="breadcrumb">
                             <ul class="app-breadcrumb breadcrumb">
-                            <li class="breadcrumb-item"><a href="/"><i class="fa fa-home fa-lg"></i></a></li>
+                            <li class="breadcrumb-item"><a href="/"><i class="fa fa-angle-double-left fa-lg"></i>  Back to Dashboard</a></li>
                             <li class="breadcrumb-item">Operators</li>
                             </ul>
                             </nav>

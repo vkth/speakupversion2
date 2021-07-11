@@ -8,11 +8,11 @@ $id = $_POST['id'];
 		die('Unable to connect to datebase ' . mysqli_connect_error());
 	}
 
-	$stmt = $conn->prepare("SELECT vehicle, body_plate, narrative, ratings FROM reviews WHERE user_id='$id';");
+	$stmt = $conn->prepare("SELECT vehicle, body_plate, narrative, file, date, time FROM complaints WHERE user_id='$id';");
 	
 	$stmt->execute();
 	
-	$stmt->bind_result($vehicle, $body_plate, $narrative, $ratings);
+	$stmt->bind_result($vehicle, $body_plate, $narrative, $file, $date, $time);
  
  $items = array(); 
 
@@ -21,7 +21,9 @@ $id = $_POST['id'];
  $temp['vehicle'] = $vehicle;
  $temp['body_plate'] = $body_plate;
  $temp['narrative'] = $narrative; 
- $temp['ratings'] = $ratings; 
+ $temp['image_name'] = $file;
+ $temp['date'] = $date; 
+ $temp['time'] = $time; 
  array_push($items, $temp);
  }
 

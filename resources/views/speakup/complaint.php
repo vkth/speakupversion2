@@ -3,8 +3,6 @@
 if ($_SERVER['REQUEST_METHOD'] =='POST'){
 
 	$user_id = $_POST['user_id'];
-	//$name = $_POST['name'];
-	//$username = $_POST['username'];
     $body_plate = $_POST['body_plate'];
 	$date = $_POST['date'];
     $time = $_POST['time'];
@@ -16,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] =='POST'){
 	
     require_once 'connect.php';
 
-    $sql = "INSERT INTO complaints (user_id, body_plate, narrative, date, time, vehicle, file) VALUES ('$user_id', '$body_plate', '$narrative', '$date', '$time', '$vehicle', '$filename')";
+    $sql = "INSERT INTO complaints (user_id, body_plate, narrative, date, time, vehicle, file, status) VALUES ('$user_id', '$body_plate', '$narrative', '$date', '$time', '$vehicle', '$filename', 'pending')";
 
     if ( mysqli_query($conn, $sql) ) {
         $result["success"] = "1";

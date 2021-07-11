@@ -43,30 +43,30 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="/"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                        <a href="/"><i class="menu-icon fa fa-tachometer fa-lg"></i>Dashboard </a>
                     </li>
                     <li class="menu-title">Reports</li><!-- /.menu-title -->
                     
                     
                     <li class="menu-item">
-                        <a href="commends"><i class="menu-icon fa fa-folder"></i>Commendations </a>
+                        <a href="commends"><i class="menu-icon fa fa-folder fa-lg "></i>Commendations </a>
                     </li>
                     <li class="menu-item">
-                        <a href="complaints"><i class="menu-icon fa fa-exclamation-triangle"></i>Complaints</a>
+                        <a href="complaints"><i class="menu-icon fa fa-exclamation-triangle fa-lg"></i>Complaints</a>
                     </li>
                     <li class="menu-item">
-                        <a href="reviews"><i class="menu-icon fa fa-book"></i>Reviews </a>
+                        <a href="reviews"><i class="menu-icon fa fa-book fa-lg"></i>Reviews </a>
                     </li>
 
                     <li class="menu-title">Other Pages</li><!-- /.menu-title -->
                     <li class="menu-item">
-                        <a href="operators"><i class="menu-icon fa fa-users"></i>Operators </a>
+                        <a href="operators"><i class="menu-icon fa fa-users fa-lg"></i>Operators </a>
                     </li>
                     <li class="menu-item">
-                        <a href="vehicles"><i class="menu-icon fa fa-car"></i>Public Vehicles</a>
+                        <a href="vehicles"><i class="menu-icon fa fa-car fa-lg"></i>Public Vehicles</a>
                     </li>
                     <li class="menu-item">
-                        <a href="mobileappusers"><i class="menu-icon fa fa-mobile"></i>Mobile App Users </a>
+                        <a href="mobileappusers"><i class="menu-icon fa fa-mobile fa-lg"></i>Mobile App Users </a>
                     </li>
                     
                 </ul>
@@ -82,7 +82,7 @@
                 <div class="navbar-header">
                     <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
                     <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
-                    <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+                    <a id="menuToggle" class="menutoggle"><i class="fa fa-bars fa-lg"></i></a>
                 </div>
             </div>
            
@@ -92,7 +92,7 @@
                         <li class="nav-item d-none d-md-block ">
                             <a href="{{ url('/logout') }}" class="nav-link "
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> 
-                            <i class="mdi mdi-logout"></i> Logout </a>
+                            <i class="mdi mdi-logout "></i> Logout </a>
                             <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                             @csrf
                             </form>
