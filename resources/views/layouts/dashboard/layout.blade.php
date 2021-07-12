@@ -58,7 +58,7 @@
                         <a href="reviews"><i class="menu-icon fa fa-book fa-lg"></i>Reviews </a>
                     </li>
 
-                    <li class="menu-title">Other Pages</li><!-- /.menu-title -->
+                    <li class="menu-title">__________________________</li><!-- /.menu-title -->
                     <li class="menu-item">
                         <a href="operators"><i class="menu-icon fa fa-users fa-lg"></i>Operators </a>
                     </li>
@@ -66,9 +66,26 @@
                         <a href="vehicles"><i class="menu-icon fa fa-car fa-lg"></i>Public Vehicles</a>
                     </li>
                     <li class="menu-item">
-                        <a href="mobileappusers"><i class="menu-icon fa fa-mobile fa-lg"></i>Mobile App Users </a>
+                        <a href="mobileappusers"><i class="menu-icon fa fa-mobile fa-2x"></i>Mobile App Users </a>
                     </li>
+
+                    <li class="menu-title">__________________________</li><!-- /.menu-title -->
+                    <!--LOGOUT-->
+                   
                     
+                        <li class="nav-item d-none d-md-block ">
+                            <a href="{{ url('/logout') }}" class="nav-link "
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> 
+                            <i class="mdi mdi-logout mdi-18px"></i> Logout </a>
+                            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                            @csrf
+                            </form>
+                        </li>
+                   
+                            
+
+                   
+                  
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -86,22 +103,7 @@
                 </div>
             </div>
            
-            <!--LOGOUT-->
-            <div class="bottom-right">
-                <div class="header-menu">
-                        <li class="nav-item d-none d-md-block ">
-                            <a href="{{ url('/logout') }}" class="nav-link "
-                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> 
-                            <i class="mdi mdi-logout "></i> Logout </a>
-                            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                            @csrf
-                            </form>
-                        </li>
-                   
-                            
-
-                </div>
-            </div>
+            
         </header>
         <!-- /#header -->
         <div class="clearfix"></div>

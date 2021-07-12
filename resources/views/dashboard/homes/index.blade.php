@@ -125,11 +125,11 @@
                                             <div class="tdl-content">
                                                 <ul>
                                                 <h3 class="title">Purpose and Description</h3>
-                                                  <p>This is a system designed to facilitate the commuters in sending their complaints</p> 
-                                                  <p>  and/or commendations towards a certain PUV to the Public Safety Office(PSO),</p> 
-                                                  <p>  the office in-charge for public safety and concern.</p>
-                                                  <p>It is a web and mobile application, the web application is developed for</p>
-                                                  <p> the admin’s use and the mobile application is developed to cater the commuter’s need.</p>
+                                                  <li>This is a system designed to facilitate the commuters in sending their complaints</li> 
+                                                  <li>and/or commendations towards a certain PUV to the Public Safety Office(PSO),</li> 
+                                                  <li>the office in-charge for public safety and concern.</li>
+                                                  <li>It is a web and mobile application, the web application is developed for</li>
+                                                  <li>the admin’s use and the mobile application is developed to cater the commuter’s need.</li>
 
 
                                                 </ul>
