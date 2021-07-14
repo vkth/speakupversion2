@@ -72,7 +72,7 @@
                                                             <th>User ID</th>
                                                             <th>Body Plate</th>
                                                             <th>Type of Vehicle</th>
-                                                            <th>Ratings</th>
+                                                            <th>Ave. Ratings</th>
                                                             <th>Review</th>
                                                             
                                                         </tr> 

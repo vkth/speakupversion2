@@ -173,14 +173,14 @@
                                                 <div class="modal-body">
 
                                                     <div class="form-group">
-                                                        <label>Body Plate:</label>
+                                                        <label for="modal-input-body_plate">Body Plate:</label>
                                                         <input type="text" id='body_plate' name="body_plate" class="form-control" placeholder="Enter Body plate">
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="vehicles">Type of Vehicle:</label>
                                                         <select class="form-control" id='vehicle' name="vehicle">
-                                                            <option disabled>Select Vehicle</option>
+                                                            <option >Select Vehicle</option>
                                                             <option>Jeep</option>
                                                             <option>Taxi</option>
                                                             <option>Taxicle</option>
@@ -192,7 +192,7 @@
                                                     <div class="form-group">
                                                         <label for="status">Status:</label>
                                                             <select class="form-control" id='status' name="status">
-                                                            <option disabled>Select Status </option>
+                                                            <option >Select Status </option>
                                                             <option>Certified</option>
                                                             <option>Colorum</option>
                                                         
@@ -219,6 +219,9 @@
                         </div>
                     </div>
         <!-- End Edit Modal -->
+
+        
+
         <!--            
         $$$$$$$\  $$$$$$$$\ $$\       $$$$$$$$\ $$$$$$$$\ $$$$$$$$\ 
         $$  __$$\ $$  _____|$$ |      $$  _____|\__$$  __|$$  _____|
@@ -271,7 +274,6 @@
 
 
             <!--End Confirm Delete Modal-->
-        
             
 
             <!--$$\    $$\ $$$$$$$$\ $$\   $$\ $$$$$$\  $$$$$$\  $$\       $$$$$$$$\ 
@@ -323,7 +325,7 @@
                                                             <th>Body_Plate</th>
                                                             <th>Operator ID</th>
                                                             <th>Operator Name</th>
-                                                            <th>Action</th>
+                                                            <th></th>
                                                     
                                                         </tr> 
                                                     </thead>
@@ -337,7 +339,8 @@
                                                                 <td>{{ $vehicle->operator->name }}</td>
                                                                 
                                                                 <td>
-                                                                      <button class="btn btn-info edit-vehicle-btn"  vehicle_id={{ $vehicle->id }}><i class="fa fa-edit"></i></button>  
+                                                                       
+                                                                      <button class="btn btn-primary edit-vehicle-btn"  vehicle_id={{ $vehicle->id }}><i class="fa fa-edit"></i></button>  
                                                                       <button class="btn btn-danger delete-vehicle-btn" vehicle_id={{ $vehicle->id }}><i class="fa fa-trash"></i></button>
                                                                 </td>
                                                             </tr>
@@ -386,18 +389,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
-    
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.colVis.min.js"></script>
+
     <script type="text/javascript"> 
     $(document).ready(function () {
         $('#datatable').DataTable({
             dom: 'Bfrtip',
-            buttons: ['csv', 'excel', 'pdf', 'print']
+            buttons: ['csv', 'excel', 'pdf', 'print', 'colvis']
+          
         });
 
         $('body').on('click', '.edit-vehicle-btn', function () {
             var vehicle_id=$(this).attr('vehicle_id');
             $('#editform').attr('action', '/vehicles/'+vehicle_id);
             $('#editModal').modal('show');
+           
+            // fill the data in the input fields
+            $("#modal-input-id").val(id);
+            $("#modal-input-name").val(name);
+            $("#modal-input-body_plate").val(body_plate);
+        });
+
+        $('body').on('click', '.view-vehicle-btn', function () {
+            var vehicle_id=$(this).attr('vehicle_id');
+            $('#viewform').attr('action', '/vehicles/'+vehicle_id);
+            $('#viewModal').modal('show');
         });
 
         $('body').on('click', '.delete-vehicle-btn', function () {

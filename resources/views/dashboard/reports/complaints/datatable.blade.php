@@ -70,7 +70,7 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="editModalLabel">
-                                     Are you sure you want to update status? Click submit to save changes.</h5>
+                                     Are you sure you want to update status? </h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -84,9 +84,10 @@
                                                 <div class="modal-body">
 
                                                     <div class="form-group">
-                                                        <label for="status">Complaint Status:</label>
+                                                   
+                                                        <label for="status">Complaint Status: </label>
                                                             <select class="form-control" id='status' name="status">
-                                                            <option > --- Select Status -- </option>
+                                                            <option>--Select Status--</option>
                                                             <option>Solved</option>
                                                             <option>Pending</option>
                                                         

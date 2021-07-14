@@ -37,7 +37,7 @@
                                             
                                             <div class="stat-text">Total: <span class="count">
                                             <?php
-                                                $connection = mysqli_connect("remotemysql.com", "fKjE0CChQb", "fiDmb2Jzyd", "fKjE0CChQb");
+                                                $connection = mysqli_connect("localhost", "root", "", "speakupversion2");
 
                                                   $query = "SELECT id FROM complaints ORDER BY id" ;
                                                   $query_run = mysqli_query($connection, $query);
@@ -67,7 +67,7 @@
                                         <div class="text-left dib">
                                             <div class="stat-text">Total: <span class="count">
                                               <?php
-                                                $connection = mysqli_connect("remotemysql.com", "fKjE0CChQb", "fiDmb2Jzyd", "fKjE0CChQb");
+                                                $connection = mysqli_connect("localhost", "root", "", "speakupversion2");
 
                                                   $query = "SELECT id FROM reviews ORDER BY id" ;
                                                   $query_run = mysqli_query($connection, $query);
@@ -95,7 +95,7 @@
                                         <div class="text-left dib">
                                             <div class="stat-text">Total: <span class="count">
                                               <?php
-                                                $connection = mysqli_connect("remotemysql.com", "fKjE0CChQb", "fiDmb2Jzyd", "fKjE0CChQb");
+                                                $connection = mysqli_connect("localhost", "root", "", "speakupversion2");
                                                 
                                                   $query = "SELECT id FROM mobileappusers ORDER BY id" ;
                                                   $query_run = mysqli_query($connection, $query);
@@ -123,7 +123,7 @@
                                     <div class="todo-list">
                                         <div class="tdl-holder">
                                             <div class="tdl-content">
-                                                <ul>
+                                               
                                                 <h3 class="title">Purpose and Description</h3>
                                                   <li>This is a system designed to facilitate the commuters in sending their complaints 
                                                     and/or commendations towards a certain PUV to the Public Safety Office(PSO), 
@@ -131,8 +131,7 @@
                                                   <li>It is a web and mobile application, the web application is developed for
                                                   the admin’s use and the mobile application is developed to cater the commuter’s need.</li>
 
-
-                                                </ul>
+                                                
                                             </div>
                                         </div>
                                     </div> 

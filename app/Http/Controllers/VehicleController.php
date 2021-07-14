@@ -14,6 +14,11 @@ class VehicleController extends Controller
         return view ('dashboard.vehicles.datatable', compact('vehicles'));
     }
 
+    public function show(){
+        $vehicles = Vehicle::all();
+        return view ('dashboard.vehicles.datatable', compact('vehicles'));
+    }
+    
 
     public function ajax()
     {
