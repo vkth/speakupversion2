@@ -14,7 +14,6 @@ class OperatorController extends Controller
         return view('dashboard.operators.datatable', compact('operators'));
     }
 
-   
     public function ajax()
     {
         return view('operator.ajax');
@@ -67,6 +66,7 @@ class OperatorController extends Controller
     protected function validateOperator($create=true){
 
         return request()->validate([
+            
             'name' => 'required',
             'address' => 'required',
             'phone_number' => 'required',
@@ -82,6 +82,13 @@ class OperatorController extends Controller
         return redirect('/operators')->with('warning', 'Operator Successfully Deleted!');
     }
         
+
+    // public function edit($id)
+	// {
+	// 	$operators->where('id', $id)->first();
+
+    //     return view('operators.edit')->with('operator', $operator)->with('vehicle', $vehicle);
+	// }
 
     
 }

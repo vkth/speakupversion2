@@ -17,9 +17,12 @@ class CreateVehiclesTable extends Migration
             $table->bigIncrements('id');
             $table->enum("vehicle",["jeep", "tricycle", "taxicle", "taxi"]);
             $table->string('body_plate');
-            $table->enum('status',["Certified", "Colorum"] );
+            $table->enum('status',["Registered", "Colorum"] );
             $table->unsignedBigInteger('operator_id');
-            $table->unsignedBigInteger('admin_id');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedBigInteger('mobileappuser_id')->nullable();
+            $table->unsignedBigInteger('complaint_id');
+            $table->unsignedBigInteger('review_id');
             $table->timestamps();
         });
     }

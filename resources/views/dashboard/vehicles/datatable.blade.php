@@ -23,7 +23,6 @@
             </div>
             
 <!-- 
-
         $$$$$$\  $$$$$$$\  $$$$$$$\                               
         $$  __$$\ $$  __$$\ $$  __$$\                              
         $$ /  $$ |$$ |  $$ |$$ |  $$ |                             
@@ -323,7 +322,7 @@
                                                             <th>Type of Vehicle</th>
                                                             <th>Status</th>
                                                             <th>Body_Plate</th>
-                                                            <th>Operator ID</th>
+                                                            <th>Vehicle Review</th>
                                                             <th>Operator Name</th>
                                                             <th></th>
                                                     
@@ -335,9 +334,8 @@
                                                                 <td>{{ $vehicle->vehicle }}</td>
                                                                 <td>{{ $vehicle->status }}</td>
                                                                 <td>{{ $vehicle->body_plate }}</td>
-                                                                <td>{{ $vehicle->operator->id }}</td>
+                                                                <td>{{ $vehicle->review_id}}</td>
                                                                 <td>{{ $vehicle->operator->name }}</td>
-                                                                
                                                                 <td>
                                                                        
                                                                       <button class="btn btn-primary edit-vehicle-btn"  vehicle_id={{ $vehicle->id }}><i class="fa fa-edit"></i></button>  
@@ -357,6 +355,8 @@
                 </div>
             </div>
             
+            
+
 
             
         </div>
@@ -398,7 +398,6 @@
             buttons: ['csv', 'excel', 'pdf', 'print', 'colvis']
           
         });
-
         $('body').on('click', '.edit-vehicle-btn', function () {
             var vehicle_id=$(this).attr('vehicle_id');
             $('#editform').attr('action', '/vehicles/'+vehicle_id);
@@ -409,13 +408,11 @@
             $("#modal-input-name").val(name);
             $("#modal-input-body_plate").val(body_plate);
         });
-
         $('body').on('click', '.view-vehicle-btn', function () {
             var vehicle_id=$(this).attr('vehicle_id');
             $('#viewform').attr('action', '/vehicles/'+vehicle_id);
             $('#viewModal').modal('show');
         });
-
         $('body').on('click', '.delete-vehicle-btn', function () {
             var vehicle_id=$(this).attr('vehicle_id');
             $('#yesconfirmdelete').attr('vehicle_id', vehicle_id);
@@ -428,10 +425,10 @@
             $('#deletevehicleform').submit();
         });
     });
-
 </script>
 </body>
 
 </html>
 
 @endsection
+

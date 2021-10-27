@@ -16,13 +16,14 @@ class CreateCommendationsTable extends Migration
         Schema::create('commendations', function (Blueprint $table) 
         {    
             $table->bigIncrements('id');
-            $table->date('date');
-            $table->time('time');
+            $table->date('date')->nullable();
+            $table->time('time')->nullable();
             $table->text('narrative');
             $table->string('file');
             $table->enum("vehicle",["jeep", "tricycle", "taxicle", "taxi"]);
             $table->unsignedBigInteger('user_id');
             $table->string('body_plate');
+            $table->unsignedBigInteger('mobileappuser_id')->nullable();
             $table->timestamps();
             
         });

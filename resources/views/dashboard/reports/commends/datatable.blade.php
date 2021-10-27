@@ -22,18 +22,7 @@
            
             <div class="container-fluid">
         
-
-<!-- 
-        $$$$$$$\   $$$$$$\   $$$$$$\  $$$$$$$$\        $$$$$$\   $$$$$$\  $$\   $$\ $$$$$$$$\ $$$$$$$$\ $$\   $$\ $$$$$$$$\ 
-        $$  __$$\ $$  __$$\ $$  __$$\ $$  _____|      $$  __$$\ $$  __$$\ $$$\  $$ |\__$$  __|$$  _____|$$$\  $$ |\__$$  __|
-        $$ |  $$ |$$ /  $$ |$$ /  \__|$$ |            $$ /  \__|$$ /  $$ |$$$$\ $$ |   $$ |   $$ |      $$$$\ $$ |   $$ |   
-        $$$$$$$  |$$$$$$$$ |$$ |$$$$\ $$$$$\          $$ |      $$ |  $$ |$$ $$\$$ |   $$ |   $$$$$\    $$ $$\$$ |   $$ |   
-        $$  ____/ $$  __$$ |$$ |\_$$ |$$  __|         $$ |      $$ |  $$ |$$ \$$$$ |   $$ |   $$  __|   $$ \$$$$ |   $$ |   
-        $$ |      $$ |  $$ |$$ |  $$ |$$ |            $$ |  $$\ $$ |  $$ |$$ |\$$$ |   $$ |   $$ |      $$ |\$$$ |   $$ |   
-        $$ |      $$ |  $$ |\$$$$$$  |$$$$$$$$\       \$$$$$$  | $$$$$$  |$$ | \$$ |   $$ |   $$$$$$$$\ $$ | \$$ |   $$ |   
-        \__|      \__|  \__| \______/ \________|       \______/  \______/ \__|  \__|   \__|   \________|\__|  \__|   \__|   
--->
-
+            <!-- Commends Table -->
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
@@ -47,7 +36,7 @@
                             
                                                     <thead>
                                                         <tr>
-                                                            <th>User ID</th>
+                                                            <th>App User</th>
                                                             <th>Body Plate</th>
                                                             <th>Type of Vehicle</th>
                                                             <th>Date</th>
@@ -58,7 +47,7 @@
                                                     </thead>
                                                         @foreach ($commendations as $commend)
                                                             <tr>
-                                                                <td>{{ $commend->user_id}}</td>
+                                                                <td>{{ $commend->mobileappuser->name }}</td>
                                                                 <td>{{ $commend->body_plate }}</td>
                                                                 <td>{{ $commend->vehicle }}</td>
                                                                 <td>{{ $commend->date }}</td> 
@@ -76,14 +65,26 @@
                 </div>
             </div>
 
-           
+            <!-- End Commends Table -->
+            
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center">
-              2021. All Rights Reserved By Ateneo de Naga Univertsity. 
-                Designed and Developed by Delas Alas, Ferrer, and San Joaquin
+            
+             <footer class="site-footer">
+                <div class="footer-inner bg-white">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Copyright &copy; 2018 Ela Admin . 2021 Ateneo de Naga University .
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            Developed by Delas Alas, Ferrer, and San Joaquin .
+                            Designed by <a href="https://colorlib.com">Colorlib</a>
+                        </div>
+                    </div>
+                </div>
             </footer>
+            
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->

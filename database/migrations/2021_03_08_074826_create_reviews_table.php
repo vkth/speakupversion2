@@ -18,10 +18,12 @@ class CreateReviewsTable extends Migration
             $table->bigIncrements('id');
             $table->string('narrative');
             $table->unsignedBigInteger('ratings');
-            $table->enum("vehicle",["jeep", "tricycle", "taxicle", "taxi"]);
-            $table->timestamps();
-            $table->unsignedBigInteger('user_id');
             $table->string('body_plate');
+            $table->enum("vehicle",["jeep", "tricycle", "taxicle", "taxi"]);
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedBigInteger('mobileappuser_id')->nullable();
+            $table->timestamps();
+            
            
         });
     }

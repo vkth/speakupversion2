@@ -37,6 +37,7 @@
 </head>
 
 <body>
+         
     <!-- Left Panel -->
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
@@ -47,29 +48,31 @@
                     </li>
                     <li class="menu-title">Reports</li><!-- /.menu-title -->
                     
-                    
-                    <li class="menu-item">
+                    <!-- <li class="menu-item"> ****Commendations menu****  
                         <a href="commends"><i class="menu-icon fa fa-folder fa-lg "></i>Commendations </a>
-                    </li>
-                    <li class="menu-item">
+                    </li> -->
+                    
+                    <li class="">
                         <a href="complaints"><i class="menu-icon fa fa-exclamation-triangle fa-lg"></i>Complaints</a>
                     </li>
-                    <li class="menu-item">
+                    <li class="">
                         <a href="reviews"><i class="menu-icon fa fa-book fa-lg"></i>Reviews </a>
                     </li>
 
-                    <li class="menu-title">__________________________</li><!-- /.menu-title -->
-                    <li class="menu-item">
+                    <li class="menu-title">__________________________</li><!-- Divider -->
+                    <li class="">
                         <a href="operators"><i class="menu-icon fa fa-users fa-lg"></i>Operators </a>
                     </li>
-                    <li class="menu-item">
+                    <li class="">
                         <a href="vehicles"><i class="menu-icon fa fa-car fa-lg"></i>Public Vehicles</a>
                     </li>
-                    <li class="menu-item">
+                    <li class="">
                         <a href="mobileappusers"><i class="menu-icon fa fa-mobile fa-2x"></i>Mobile App Users </a>
                     </li>
 
-                    <li class="menu-title">__________________________</li><!-- /.menu-title -->
+                    <li class="menu-title">__________________________</li><!-- Divider  -->
+                   
+                   
                     <!--LOGOUT-->
                    
                     
@@ -87,7 +90,7 @@
                    
                   
                 </ul>
-            </div><!-- /.navbar-collapse -->
+            </div>
         </nav>
     </aside>
     <!-- /#left-panel -->
@@ -118,18 +121,4 @@
         <!-- /#right-panel -->
     
     
-        <!-- Footer -->
-        <footer class="site-footer">
-            <div class="footer-inner bg-white">
-                <div class="row">
-                    <div class="col-sm-6">
-                        Copyright &copy; 2018 Ela Admin
-                    </div>
-                    <div class="col-sm-6 text-right">
-                        Developed by Delas Alas, Ferrer, and San Joaquin
-                        Designed by <a href="https://colorlib.com">Colorlib</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- /.site-footer -->
+      

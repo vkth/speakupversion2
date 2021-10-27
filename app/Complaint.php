@@ -9,6 +9,7 @@ class Complaint extends Model
 {
     protected $fillable = [
         'status',
+        'narrative',
     
     ];
     public function user()
@@ -27,8 +28,14 @@ class Complaint extends Model
     }
 
     public function dashboard(){
-        return $this->belongs('App\Dashboard');
+        return $this->belongsTo('App\Dashboard');
     }
 
-    //
+    public function mobileappuser(){
+        return $this->belongsTo('App\MobileAppUser');
+    }
+
+    public function vehicle(){
+        return $this->belongsTo('App\Vehicle');
+    }
 }

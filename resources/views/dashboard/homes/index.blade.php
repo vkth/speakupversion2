@@ -164,12 +164,27 @@
                         </div>
                     </div>
                 </div>
-                <!-- /To Do and Live Chat -->
+                
 
             </div>
-            </div>    
+            </div> 
+            <!-- Footer -->
+            <footer class="site-footer">
+                        <div class="footer-inner bg-white">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    Copyright &copy; 2018 Ela Admin . 2021 Ateneo de Naga University .
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    Developed by Delas Alas, Ferrer, and San Joaquin .
+                                    Designed by <a href="https://colorlib.com">Colorlib</a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                 <!-- /.site-footer -->   
         </div>
-        <!-- /.content -->
+        
         </ul>
     </main>
     <!-- Scripts -->

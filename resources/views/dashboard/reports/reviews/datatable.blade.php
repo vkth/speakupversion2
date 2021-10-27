@@ -45,16 +45,7 @@
             <!-- ============================================================== -->
             <div class="container-fluid">
                
-                <!-- Start Page Content 
-                    $$$$$$$\   $$$$$$\   $$$$$$\  $$$$$$$$\        $$$$$$\   $$$$$$\  $$\   $$\ $$$$$$$$\ $$$$$$$$\ $$\   $$\ $$$$$$$$\ 
-                    $$  __$$\ $$  __$$\ $$  __$$\ $$  _____|      $$  __$$\ $$  __$$\ $$$\  $$ |\__$$  __|$$  _____|$$$\  $$ |\__$$  __|
-                    $$ |  $$ |$$ /  $$ |$$ /  \__|$$ |            $$ /  \__|$$ /  $$ |$$$$\ $$ |   $$ |   $$ |      $$$$\ $$ |   $$ |   
-                    $$$$$$$  |$$$$$$$$ |$$ |$$$$\ $$$$$\          $$ |      $$ |  $$ |$$ $$\$$ |   $$ |   $$$$$\    $$ $$\$$ |   $$ |   
-                    $$  ____/ $$  __$$ |$$ |\_$$ |$$  __|         $$ |      $$ |  $$ |$$ \$$$$ |   $$ |   $$  __|   $$ \$$$$ |   $$ |   
-                    $$ |      $$ |  $$ |$$ |  $$ |$$ |            $$ |  $$\ $$ |  $$ |$$ |\$$$ |   $$ |   $$ |      $$ |\$$$ |   $$ |   
-                    $$ |      $$ |  $$ |\$$$$$$  |$$$$$$$$\       \$$$$$$  | $$$$$$  |$$ | \$$ |   $$ |   $$$$$$$$\ $$ | \$$ |   $$ |   
-                    \__|      \__|  \__| \______/ \________|       \______/  \______/ \__|  \__|   \__|   \________|\__|  \__|   \__|   
-                -->
+                <!-- Reviews Table -->
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
@@ -69,17 +60,17 @@
                             
                                                     <thead>
                                                         <tr>
-                                                            <th>User ID</th>
+                                                            <th>App User</th>
                                                             <th>Body Plate</th>
                                                             <th>Type of Vehicle</th>
-                                                            <th>Ave. Ratings</th>
+                                                            <th>Ratings</th>
                                                             <th>Review</th>
                                                             
                                                         </tr> 
                                                     </thead>
                                                         @foreach ($reviews as $review)
                                                         <tr>
-                                                                    <td>{{ $review->user_id }}</td>
+                                                                    <td>{{ $review->mobileappuser->username}}</td>
                                                                     <td>{{ $review->body_plate }}</td>
                                                                     <td>{{ $review->vehicle }}</td>
                                                                     <td>{{ $review->ratings}}</td>
@@ -100,12 +91,27 @@
                 </div>
                 
             </div>
-
+            <!-- End of  Reviews Table -->
+           
             
-            <footer class="footer text-center">
-                 2021. All Rights Reserved By Ateneo de Naga Univertsity. 
-                Designed and Developed by Delas Alas, Ferrer, and San Joaquin
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            
+            <footer class="site-footer">
+                <div class="footer-inner bg-white">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Copyright &copy; 2018 Ela Admin . 2021 Ateneo de Naga University .
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            Developed by Delas Alas, Ferrer, and San Joaquin .
+                            Designed by <a href="https://colorlib.com">Colorlib</a>
+                        </div>
+                    </div>
+                </div>
             </footer>
+            
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->

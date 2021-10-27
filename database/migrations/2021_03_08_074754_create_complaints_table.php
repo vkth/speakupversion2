@@ -17,14 +17,16 @@ class CreateComplaintsTable extends Migration
         {   
             $table->bigIncrements('id');
             $table->string('body_plate');
-            $table->date('date');
-            $table->time('time');
+            $table->string('date')->nullable();
+            $table->string('time')->nullable();
             $table->string('narrative');
             $table->enum("vehicle",["jeep", "tricycle", "taxicle", "taxi"]);
             $table->string('file');
-            $table->unsignedBigInteger('user_id');
-            $table->enum('status',["pending", "solved"] );
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->enum('status',["pending", "solved", "settled", "dismissed", "challenge", "penalized"], );
+            $table->unsignedBigInteger('mobileappuser_id')->nullable();
             $table->timestamps();
+
            
         });
     }

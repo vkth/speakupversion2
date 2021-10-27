@@ -5,84 +5,84 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Vehicle;
 use App\Operator;
+use App\Complaint;
+use App\Review;
 use Auth;
 
 class VehicleController extends Controller
 {
-    public function index(){
-        $vehicles = Vehicle::all();
-        return view ('dashboard.vehicles.datatable', compact('vehicles'));
+   
+    public function index() {
+        $vehicles=Vehicle::all();
+        return view('dashboard.vehicles.datatable', compact('vehicles'));
     }
-
-    public function show(){
-        $vehicles = Vehicle::all();
-        return view ('dashboard.vehicles.datatable', compact('vehicles'));
-    }
-    
 
     public function ajax()
     {
-        return view('vehicles.ajax');
+        return view('vehicle.ajax');
     }
 
+    public function create()
+    {
+        //
+    }
+
+    
     public function store(Request $request)
     {
-        
+        $this ->validate($request,[
+            
+            'body_plate'          => 'required',
+            'vehicle'       => 'required',
+            'status'  => 'required',
 
-        $validated_vehicle     = $this->validateVehicle();
-        $validated_operator_name    = $this->validateOperatorName();
-                             
-        // find the specific operator with the given id
-        $operator = Operator::find($validated_vehicle['operator_id']);
-        $validated_vehicle['admin_id'] = Auth::user()->id;
-        $vehicles = $operator->vehicles()->create($validated_vehicle);
+            ]);
+
+        $vehicle = new Vehicle;
         
-        //$vehicles = Operator::where('name', 'like', '%' . $validated_operator_name .'%' )->get()->first();
+        $vehicle->body_plate            = $request->input('body_plate');
+        $vehicle->vehicle         = $request->input('vehicle');
+        $vehicle->status    = $request->input('status');
+        
        
-        //$vehicle->save();
-
-        return redirect('/vehicles')->with('success', 'Vehicle Added!');
+        $vehicle->save();
+        
+        return redirect('/vehicles')->with('success', 'Success! Vehicle Added');
     }
+
+   
+    public function show($id)
+    {
+        //
+    }
+
 
     public function update(Vehicle $vehicle){
 
         $validated_vehicle = $this->validateVehicle(false);
-        //$validated_operator_name = $this->validateOperatorName(false);
-
+       
         $vehicle->update($validated_vehicle);
-        //$vehicle->update($validated_operator_name);
         
-        return redirect('/vehicles')->with('success', 'Vehicle Updated!');
+        return redirect('/vehicles')->with('success', 'Vehicle Profile Updated!');
     }
 
     protected function validateVehicle($create=true){
 
         return request()->validate([
-            'body_plate' => 'required',
-            'vehicle' => 'required',
-            'status' => 'required',
-            'operator_id' => $create? 'required|numeric':'',
+            
+            'body_plate'          => 'required',
+            'vehicle'       => 'required',
+            'status'  => 'required',
             
             ]); // validate request
     }
 
-    protected function validateOperatorName($create=true){
-
-        return request()->validate([
-            'operator_name' => 'required',
-            
-            ]); // validate request
-    }
-
-    public function edit($id)
-	{
-		
-	}
-
-    public function destroy(Vehicle $vehicle){
+  
+    public function destroy(Vehicle $vehicles){
 
         $vehicle->delete();
 
-        return redirect('/vehicles')->with('success', 'Vehicle Successfully Deleted!');
+        return redirect('/vehicles')->with('warning', 'Vehicle Successfully Deleted!');
     }
+        
 }

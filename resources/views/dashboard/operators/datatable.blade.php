@@ -247,32 +247,13 @@
                         <div class="table-responsive">
                             <div class="panel panel-default"> 
         
-
-                                <!--
-                                    $$$$$$$\   $$$$$$\ $$$$$$$$\  $$$$$$\             
-                                    $$  __$$\ $$  __$$\\__$$  __|$$  __$$\            
-                                    $$ |  $$ |$$ /  $$ |  $$ |   $$ /  $$ |           
-                                    $$ |  $$ |$$$$$$$$ |  $$ |   $$$$$$$$ |           
-                                    $$ |  $$ |$$  __$$ |  $$ |   $$  __$$ |           
-                                    $$ |  $$ |$$ |  $$ |  $$ |   $$ |  $$ |           
-                                    $$$$$$$  |$$ |  $$ |  $$ |   $$ |  $$ |           
-                                    \_______/ \__|  \__|  \__|   \__|  \__|           
-                                                                                
-                                $$$$$$$$\  $$$$$$\  $$$$$$$\  $$\       $$$$$$$$\ 
-                                \__$$  __|$$  __$$\ $$  __$$\ $$ |      $$  _____|
-                                    $$ |   $$ /  $$ |$$ |  $$ |$$ |      $$ |      
-                                    $$ |   $$$$$$$$ |$$$$$$$\ |$$ |      $$$$$\    
-                                    $$ |   $$  __$$ |$$  __$$\ $$ |      $$  __|   
-                                    $$ |   $$ |  $$ |$$ |  $$ |$$ |      $$ |      
-                                    $$ |   $$ |  $$ |$$$$$$$  |$$$$$$$$\ $$$$$$$$\ 
-                                    \__|   \__|  \__|\_______/ \________|\________|
-                                -->
-                                <!--TABLE-->
+                                
+                                <!--Operators TABLE-->
                                 <table id="datatable" class="table table-bordered" border="0" cellpadding="2" cellspacing="1" class="pretty" style="width:100%">
                         
                                                 <thead>
                                                     <tr>
-                                                        <th >Operators ID NO:</th>
+                                                       
                                                         <th >Name</th>
                                                         <th >Phone Number</th>
                                                         <th >Address</th>
@@ -282,8 +263,8 @@
                                                 </thead>
                                                 <tfoot>
                                                     <tr>
-                                                        <th >Operators ID NO:</th>
-                                                        <th >Name</th>
+                                                      
+                                                        <th> Name</th>
                                                         <th >Phone Number</th>
                                                         <th >Address</th>
                                                         <th >Action</th>
@@ -292,19 +273,19 @@
                                                 </tfoot>
                                                     @foreach ($operators as $operator)
                                                         <tr>
-                                                            <td>{{ $operator->id}}</td>
+
                                                             <td>{{ $operator->name}}</td>
                                                             <td>{{ $operator->phone_number }}</td>
                                                             <td>{{ $operator->address }}</td>
                                                             <td>
                                                                 <button class="btn btn-info edit-operator-btn"  operator_id={{ $operator->id }}><i class="fa fa-edit"></i></button> 
-                                                                <button class="btn btn-danger delete-operator-btn" operator_id={{ $operator->id }}><i class="fa fa-trash"></i>  </button>
+                                                                <button class="btn btn-danger delete-operator-btn" operator_id={{ $operator->id}}><i class="fa fa-trash"></i>  </button>
                                                             </td>   
                                                         </tr>
                                                     @endforeach
                                 </table>
                                     
-                                <!--TABLE-->   
+                                <!--End of Operators TABLE-->   
                             </div>
                         </div>
                     </div>
@@ -314,7 +295,23 @@
     </div>
     
 </div>
-           
+        
+       <!-- Footer -->
+       <footer class="site-footer">
+                <div class="footer-inner bg-white">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Copyright &copy; 2018 Ela Admin . 2021 Ateneo de Naga University .
+                        
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            Developed by Delas Alas, Ferrer, and San Joaquin .
+                            Designed by <a href="https://colorlib.com">Colorlib</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- /.site-footer -->
            
   
     

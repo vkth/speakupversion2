@@ -88,9 +88,12 @@
                                                         <label for="status">Complaint Status: </label>
                                                             <select class="form-control" id='status' name="status">
                                                             <option>--Select Status--</option>
-                                                            <option>Solved</option>
-                                                            <option>Pending</option>
-                                                        
+                                                            <option >Solved</option>
+                                                            <option >Pending</option>
+                                                            <option >Settled</option>
+                                                            <option >Dismissed</option>
+                                                            <option >Challenge</option>
+                                                            <option >Penalized</option>
                                                         </select>
                                                     </div>
 
@@ -107,16 +110,8 @@
                     </div>
                 </div>
 
-                <!-- Start Page Content 
-                    $$$$$$$\   $$$$$$\   $$$$$$\  $$$$$$$$\        $$$$$$\   $$$$$$\  $$\   $$\ $$$$$$$$\ $$$$$$$$\ $$\   $$\ $$$$$$$$\ 
-                    $$  __$$\ $$  __$$\ $$  __$$\ $$  _____|      $$  __$$\ $$  __$$\ $$$\  $$ |\__$$  __|$$  _____|$$$\  $$ |\__$$  __|
-                    $$ |  $$ |$$ /  $$ |$$ /  \__|$$ |            $$ /  \__|$$ /  $$ |$$$$\ $$ |   $$ |   $$ |      $$$$\ $$ |   $$ |   
-                    $$$$$$$  |$$$$$$$$ |$$ |$$$$\ $$$$$\          $$ |      $$ |  $$ |$$ $$\$$ |   $$ |   $$$$$\    $$ $$\$$ |   $$ |   
-                    $$  ____/ $$  __$$ |$$ |\_$$ |$$  __|         $$ |      $$ |  $$ |$$ \$$$$ |   $$ |   $$  __|   $$ \$$$$ |   $$ |   
-                    $$ |      $$ |  $$ |$$ |  $$ |$$ |            $$ |  $$\ $$ |  $$ |$$ |\$$$ |   $$ |   $$ |      $$ |\$$$ |   $$ |   
-                    $$ |      $$ |  $$ |\$$$$$$  |$$$$$$$$\       \$$$$$$  | $$$$$$  |$$ | \$$ |   $$ |   $$$$$$$$\ $$ | \$$ |   $$ |   
-                    \__|      \__|  \__| \______/ \________|       \______/  \______/ \__|  \__|   \__|   \________|\__|  \__|   \__|   
-                -->
+                <!-- Complaints Table -->
+
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
@@ -132,11 +127,11 @@
 
                                                     <thead>
                                                         <tr>
-                                                            <th>User ID</th>
+                                                            <th>App User</th>
                                                             <th>Body Plate</th>
                                                             <th>Type of Vehicle</th>
-                                                            <th>Date Complaint</th>
-                                                            <th>Time Complaint</th>  
+                                                            <th>Date</th>
+                                                            <th>Time</th>  
                                                             <th>Complaint</th>
                                                             <th>File</th>
                                                             <th>Status</th>
@@ -146,14 +141,30 @@
                         
                                                         @foreach ($complaints as $complaint)
                                                             <tr>
-                                                                <td>{{ $complaint->user_id}}</td>
+
+                                                                <td>{{ $complaint->mobileappuser->username }}</td>
                                                                 <td>{{ $complaint->body_plate }}</td>
                                                                 <td>{{ $complaint->vehicle }}</td>   
-                                                                <td>{{ $complaint->date }}</td> 
+                                                                <td>{{ $complaint->date}}</td>
                                                                 <td>{{ $complaint->time }}</td>
                                                                 <td>{{ $complaint->narrative }}</td>
                                                                 <td>{{ $complaint->file }}</td>
-                                                                <td>{{ $complaint->status }}</td>
+                                                                <td>
+                                                                    @if($complaint->status =='solved')
+                                                                    <span class="label label-success label-rounded">{{ $complaint->status }} </span>
+                                                                    @elseif ($complaint->status == 'settled')
+                                                                    <span class="label label-info label-rounded">Settled</span>
+                                                                    @elseif ($complaint->status == 'dismissed')
+                                                                    <span class="label label-light bg-dark label-rounded">Dismissed</span>
+                                                                    @elseif ($complaint->status == 'penalized')
+                                                                    <span class="label label-danger label-rounded">Penalized</span>
+                                                                    @elseif ($complaint->status == 'challenge')
+                                                                    <span class="label label-primary label-rounded">Challenge</span>
+                                                                    @else 
+                                                                    <span class="label label-warning text-dark label-rounded">Pending</span>
+                                                                    @endif
+                                                                   
+                                                                </td>
                                                                 <td>
                                                                 <button class="btn btn-info edit-complaint-btn"  complaint_id={{ $complaint->id }}><i class="fa fa-edit"></i></button>   
                                                                 </td>
@@ -168,11 +179,29 @@
                     </div>
                 </div>
             </div>
+             <!-- End of Complaints Table -->
 
-            <footer class="footer text-center">
-                 2021. All Rights Reserved By Ateneo de Naga Univertsity. 
-                Designed and Developed by Delas Alas, Ferrer, and San Joaquin
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            
+            <footer class="site-footer">
+                <div class="footer-inner bg-white">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Copyright &copy; 2018 Ela Admin . 2021 Ateneo de Naga University .
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            Developed by Delas Alas, Ferrer, and San Joaquin .
+                            Designed by <a href="https://colorlib.com">Colorlib</a>
+                        </div>
+                    </div>
+                </div>
             </footer>
+            
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
             
         </div>
     
@@ -222,6 +251,7 @@
         
     });
     </script>
+    
 </body>
 
 </html>

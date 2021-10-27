@@ -1,5 +1,9 @@
 @extends ('layouts.dashboard.layout')
 @section('content')
+
+<link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css" rel="stylesheet">
+
         <div class="page-wrapper">
             <div class="page-breadcrumb">
                 <div class="row">
@@ -21,19 +25,26 @@
             
             <div class="container-fluid">
           
-           
+            @if(count($errors) > 0)
+
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
+
+                    @if(\Session::has('success'))
+                        <div class="alert alert-success">
+                            <p>{{ \Session::get('success') }}</p>
+                        </div>
+                    @endif
 
 
-                <!-- Start Page Content 
-                    $$$$$$$\   $$$$$$\   $$$$$$\  $$$$$$$$\        $$$$$$\   $$$$$$\  $$\   $$\ $$$$$$$$\ $$$$$$$$\ $$\   $$\ $$$$$$$$\ 
-                    $$  __$$\ $$  __$$\ $$  __$$\ $$  _____|      $$  __$$\ $$  __$$\ $$$\  $$ |\__$$  __|$$  _____|$$$\  $$ |\__$$  __|
-                    $$ |  $$ |$$ /  $$ |$$ /  \__|$$ |            $$ /  \__|$$ /  $$ |$$$$\ $$ |   $$ |   $$ |      $$$$\ $$ |   $$ |   
-                    $$$$$$$  |$$$$$$$$ |$$ |$$$$\ $$$$$\          $$ |      $$ |  $$ |$$ $$\$$ |   $$ |   $$$$$\    $$ $$\$$ |   $$ |   
-                    $$  ____/ $$  __$$ |$$ |\_$$ |$$  __|         $$ |      $$ |  $$ |$$ \$$$$ |   $$ |   $$  __|   $$ \$$$$ |   $$ |   
-                    $$ |      $$ |  $$ |$$ |  $$ |$$ |            $$ |  $$\ $$ |  $$ |$$ |\$$$ |   $$ |   $$ |      $$ |\$$$ |   $$ |   
-                    $$ |      $$ |  $$ |\$$$$$$  |$$$$$$$$\       \$$$$$$  | $$$$$$  |$$ | \$$ |   $$ |   $$$$$$$$\ $$ | \$$ |   $$ |   
-                    \__|      \__|  \__| \______/ \________|       \______/  \______/ \__|  \__|   \__|   \________|\__|  \__|   \__|   
-                 -->
+
+                <!-- Mobile App Users Table -->
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
@@ -46,22 +57,27 @@
                                             <div class="panel-body">
                                                 <table class="table" id="datatable" border="0" cellpadding="2" cellspacing="1" class="pretty" style="width:100%">
                             
+
+                                                
                                                     <thead>
                                                         <tr>
-                                                            <th>User ID</th>
+                                                            
                                                             <th>Name</th>
                                                             <th>Username</th>
+                                                            <th>Phone Number</th>
                                                             <th>Email</th>
                                                             <th>Address</th>
                                                             <th>Status</th>
+                                                          
                                                         </tr> 
                                                     </thead>
                         
                                                         @foreach ($mobileappusers as $appusers)
                                                             <tr>
-                                                                <td>{{ $appusers->id}}</td>
+                                                                
                                                                 <td>{{ $appusers->name }}</td>
                                                                 <td>{{ $appusers->username }}</td> 
+                                                                <td>{{ $appusers->phone_number }}</td>
                                                                 <td>{{ $appusers->email }}</td>
                                                                 <td>{{ $appusers->address }}</td> 
                                                                 <td>
@@ -72,6 +88,10 @@
                                                                     @endif
                                                                    
                                                                 </td>
+                                                                
+                                                                    
+                                                                </td>
+                                                                
                                                             </tr>
                                                         @endforeach
                                                 </table>
@@ -87,12 +107,23 @@
                 </div>
      
             </div>
+            <!--End of Mobile app users TABLE-->
 
-            
-            
-            <footer class="footer text-center">
-                Designed and Developed by Delas Alas, Ferrer, and San Joaquin
+            <!-- Footer -->
+            <footer class="site-footer">
+                <div class="footer-inner bg-white">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Copyright &copy; 2018 Ela Admin . 2021 Ateneo de Naga University .
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            Developed by Delas Alas, Ferrer, and San Joaquin .
+                            Designed by <a href="https://colorlib.com">Colorlib</a>
+                        </div>
+                    </div>
+                </div>
             </footer>
+            <!-- /.site-footer -->
            
         </div>
         
@@ -112,15 +143,9 @@
     <!--Menu sidebar -->
     <script src="../../dist/js/sidebarmenu.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
-    <script src="assets/js/main.js"></script>
-
     <!--Custom JavaScript -->
     <script src="../../dist/js/custom.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> -->
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script>
@@ -130,12 +155,37 @@
     <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
     
+    
     <script type="text/javascript"> 
     $(document).ready(function () {
         $('#datatable').DataTable({
             dom: 'Bfrtip',
             buttons: ['csv', 'excel', 'pdf', 'print']
+            
         });
+        
+        $('body').on('click', '.view-mobileappuser-btn', function () {
+            var mobileappuser_id=$(this).attr('mobileappuser_id');
+            $('#viewform').attr('action', '/mobileappusers/'+mobileappuser_id);
+            $('#viewModal').modal('show');
+        });
+       
+       
+
+        $('body').on('click', '.delete-mobileappuser-btn', function () {
+            var mobileappuser_id=$(this).attr('mobileappuser_id');
+            $('#yesconfirmdelete').attr('mobileappuser_id', mobileappuser_id);
+            $('#confirmdeleteModal').modal('show');
+        });
+       
+
+        $('#yesconfirmdelete').click(function(){
+            var mobileappuser_id=$(this).attr('mobileappuser_id');
+            $('#deleteoperatorform').attr('action', '/mobileappusers/'+mobileappuser_id);
+            $('#deleteoperatorform').submit();
+        });
+
+      
     });
     </script>
 </body>

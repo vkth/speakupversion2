@@ -20,4 +20,22 @@ class Mobileappuser extends Model
         'email_verified_at' => 'datetime',
     ];
 
+    public function complaint(){
+         
+        return $this->hasMany('App\Complaint');
+
+    }
+
+    public function commend(){
+         
+        return $this->hasMany('App\Commendation');
+
+    }
+
+    public function review(){
+         
+        return $this->hasMany('App\Review');
+
+    }
+
 }

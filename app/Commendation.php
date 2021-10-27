@@ -34,6 +34,10 @@ class Commendation extends Model
        }
 
     public function dashboard(){
-        return $this->belongs('App\Dashboard');
+        return $this->belongsTo('App\Dashboard');
     }
+
+    public function mobileappuser(){
+        return $this->belongsTo('App\MobileAppUser');
+  }
 }

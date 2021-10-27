@@ -25,6 +25,8 @@ class CreateMobileappusersTable extends Migration
             $table->unsignedBigInteger('admin_id');
             $table->timestamps();
         });
+
+        
     }
 
     /**

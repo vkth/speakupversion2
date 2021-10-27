@@ -9,7 +9,7 @@ class Operator extends Model
 {
     protected $fillable = ['name', 'address', 'phone_number', 'operator_id'];
 
-    public function vehicles(){
+    public function vehicle(){
          
         return $this->hasMany('App\Vehicle');
 
