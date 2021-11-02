@@ -7,7 +7,7 @@ use Carbon\Carbon;
 
 class Review extends Model
 {
-    protected $fillable = ['status', 'body_plate', 'vehicle',  'id', 'mobileappuser_id', 'narrative',  ];
+    protected $fillable = ['status', 'body_plate', 'vehicle',  'id', 'mobileappuser_id', 'narrative_review',  ];
 
     public function dashboard(){
         return $this->belongs('App\Dashboard');

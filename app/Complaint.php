@@ -9,7 +9,7 @@ class Complaint extends Model
 {
     protected $fillable = [
         'status',
-        'narrative',
+        'narrative_complaint',
     
     ];
     public function user()

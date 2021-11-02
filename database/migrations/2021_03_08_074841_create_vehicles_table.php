@@ -21,8 +21,8 @@ class CreateVehiclesTable extends Migration
             $table->unsignedBigInteger('operator_id');
             $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('mobileappuser_id')->nullable();
-            $table->unsignedBigInteger('complaint_id');
-            $table->unsignedBigInteger('review_id');
+            $table->unsignedBigInteger('complaint_id')->nullable();;
+            $table->unsignedBigInteger('review_id')->nullable();;
             $table->timestamps();
         });
     }

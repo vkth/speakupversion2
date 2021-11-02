@@ -147,7 +147,7 @@
                                                                 <td>{{ $complaint->vehicle }}</td>   
                                                                 <td>{{ $complaint->date}}</td>
                                                                 <td>{{ $complaint->time }}</td>
-                                                                <td>{{ $complaint->narrative }}</td>
+                                                                <td>{{ $complaint->narrative_complaint }}</td>
                                                                 <td>{{ $complaint->file }}</td>
                                                                 <td>
                                                                     @if($complaint->status =='solved')

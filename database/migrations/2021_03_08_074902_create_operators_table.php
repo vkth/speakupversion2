@@ -19,8 +19,6 @@ class CreateOperatorsTable extends Migration
             $table->string('address');
             $table->string('phone_number')->unique();
             $table->unsignedBigInteger('vehicle_id')->nullable();
-            $table->unsignedBigInteger('complaint_id');
-            $table->unsignedBigInteger('review_id');
             $table->timestamps();
         });
     }

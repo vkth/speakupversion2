@@ -19,7 +19,7 @@ class CreateComplaintsTable extends Migration
             $table->string('body_plate');
             $table->string('date')->nullable();
             $table->string('time')->nullable();
-            $table->string('narrative');
+            $table->string('narrative_complaint');
             $table->enum("vehicle",["jeep", "tricycle", "taxicle", "taxi"]);
             $table->string('file');
             $table->unsignedBigInteger('user_id')->nullable();

@@ -74,7 +74,7 @@
                                                                     <td>{{ $review->body_plate }}</td>
                                                                     <td>{{ $review->vehicle }}</td>
                                                                     <td>{{ $review->ratings}}</td>
-                                                                    <td>{{ $review->narrative }}</td>
+                                                                    <td>{{ $review->narrative_review }}</td>
                                                                     
                                                                 </tr>  
                                                         @endforeach

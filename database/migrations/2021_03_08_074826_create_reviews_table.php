@@ -16,7 +16,7 @@ class CreateReviewsTable extends Migration
         Schema::create('reviews', function (Blueprint $table) 
         {
             $table->bigIncrements('id');
-            $table->string('narrative');
+            $table->string('narrative_review');
             $table->unsignedBigInteger('ratings');
             $table->string('body_plate');
             $table->enum("vehicle",["jeep", "tricycle", "taxicle", "taxi"]);
